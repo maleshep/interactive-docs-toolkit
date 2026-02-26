@@ -1,0 +1,55 @@
+{
+  "initial_url_template": "{dashboard_url}/",
+  "initial_wait_text": "Dashboard",
+  "initial_theme": "light",
+  "navigation": {
+    "tab_button_selector": "nav button",
+    "enable_fallback_url": true,
+    "fallback_url_template": "{dashboard_url}/?tab={tab}",
+    "fallback_wait_until": "networkidle"
+  },
+  "actions": {
+    "set_dark_theme": [
+      { "type": "set_theme", "theme": "dark" }
+    ],
+    "open_advanced_view": [
+      {
+        "type": "goto_tab",
+        "nav_label": "Settings",
+        "tab": "settings",
+        "expected_text": "Settings"
+      },
+      { "type": "click_text", "selector": "button", "text": "Advanced", "wait_ms": 600 }
+    ]
+  },
+  "states": [
+    {
+      "state_id": "overview-light",
+      "tab": "overview",
+      "nav_label": "Overview",
+      "expected_text": "Dashboard",
+      "state": "light",
+      "components": [
+        {
+          "component_id": "TAB_OVERVIEW_KPI_ROW",
+          "section": "kpi-row",
+          "selectors": ["[data-testid='kpi-row']"],
+          "anchors": ["Total Spend"],
+          "optional": true,
+          "missing_reason": "Example selector; replace with your real app selector."
+        }
+      ]
+    }
+  ],
+  "tab_meta": {
+    "default": {
+      "source_file": "",
+      "ui_role": "Dashboard component",
+      "business_meaning": "Replace with business meaning",
+      "interactions": "Replace with interaction notes",
+      "api_endpoints": [],
+      "upstream_artifacts": [],
+      "fallback_behavior": "Replace with fallback behavior"
+    }
+  }
+}

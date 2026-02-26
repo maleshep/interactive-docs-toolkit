@@ -1,0 +1,10 @@
+node_modules/
+runs/*/clean/
+runs/*/annotated/
+runs/*/interactive-site-src/.next/
+runs/*/interactive-site-src/node_modules/
+runs/*/interactive-site-src/out/
+runs/*/interactive-site-src/public/screenshots/
+runs/*/interactive-site-static/screenshots/
+runs/*/logs/
+*.DS_Store

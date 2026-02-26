@@ -1,0 +1,17 @@
+{
+  "name": "interactive-docs-toolkit",
+  "version": "1.0.0",
+  "description": "Temp-only toolkit for generating interactive walkthrough docs dynamically",
+  "main": "index.js",
+  "scripts": {
+    "walkthrough:run": "./scripts/run_interactive_walkthrough.sh",
+    "walkthrough:prune": "./scripts/prune_screenshot_artifacts.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "playwright": "^1.58.2"
+  }
+}
