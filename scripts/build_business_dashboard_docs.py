@@ -39,8 +39,8 @@ TAB_ORDER = [
     "budget-allocator",
     "experiment",
     "insights",
-    "settings",
     "geography",
+    "settings",
 ]
 
 TAB_TITLE = {
@@ -352,10 +352,10 @@ SECTION_TEMPLATE: dict[str, dict[str, Any]] = {
     },
     "channel-metric-cards": {
         "title": "Per-Channel Metric Cards",
-        "business_question": "What are current spend, response, and efficiency signals per selected channel?",
+        "business_question": "What are current spend, response, and efficiency signals per channel?",
         "kpi_name": "Channel Snapshot Metrics",
         "bbox": [95, 860, 1460, 150],
-        "kpi_or_chart_definition": "Compact channel-level metrics aligned with currently selected curve mode.",
+        "kpi_or_chart_definition": "Compact channel-level metrics aligned with currently selected curve mode. The dashboard displays one card per active channel — the visible card (e.g. Commercial Rep Visits) is representative; all channels follow the same pattern showing Current Spend, Response, ROI, and Saturation.",
         "formula": "Current ROI_i = Current Response_i / Current Spend_i; Headroom_i = 1 - Saturation_i.",
         "inputs": ["current spend", "current response", "saturation"],
         "unit_and_scale": "Currency and ratios.",
@@ -770,6 +770,21 @@ SECTION_TEMPLATE: dict[str, dict[str, Any]] = {
         "misinterpretation_risks": "Raising data-quality incidents for an intentional tier gate.",
         "data_freshness_or_caveats": "Advanced tier availability is product/version-specific.",
     },
+    "context-selectors": {
+        "title": "Dashboard Context Selectors",
+        "business_question": "Am I looking at the right country, product, and time period?",
+        "kpi_name": "Scope Controls",
+        "bbox": [1042, 8, 540, 52],
+        "kpi_or_chart_definition": "Country, product, and year dropdowns plus theme toggle controlling the entire dashboard scope.",
+        "formula": "No direct formula. Selection determines all downstream API queries and data context.",
+        "inputs": ["available countries", "available products", "available years", "theme preference"],
+        "unit_and_scale": "N/A",
+        "how_to_read_good_vs_risk": "Good: selectors match intended analysis scope. Risk: wrong context selected leads to misinterpreted results.",
+        "decision_supported": "Ensuring all subsequent analysis applies to the correct market, product, and time period.",
+        "recommended_next_action": "Verify country/product/year before interpreting any dashboard data. Use theme toggle for presentation preferences.",
+        "misinterpretation_risks": "Assuming results apply to a different product or time period than selected.",
+        "data_freshness_or_caveats": "Available options depend on which models and data have been loaded into the system.",
+    },
 }
 
 CRITICAL_WORKED_EXAMPLES = {
@@ -817,6 +832,16 @@ CALL_OUT_OVERRIDES = {
         "title": "Model Quality One-Pager",
         "business_question": "Is this model fit for operational use?",
         "kpi_name": "R² / MAPE / Fit Signals",
+    },
+    "TAB_HOME_CONTEXT_SELECTORS": {
+        "title": "Dashboard Context Selectors",
+        "business_question": "Am I looking at the right country, product, and time period?",
+        "kpi_name": "Scope Controls",
+    },
+    "TAB_RESPONSE_CURVES_CHANNEL_METRIC_CARDS": {
+        "title": "Per-Channel Metric Cards",
+        "business_question": "What are current spend, response, and efficiency signals per channel?",
+        "kpi_name": "Channel Snapshot Metrics",
     },
 }
 

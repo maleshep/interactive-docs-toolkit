@@ -77,19 +77,17 @@ def prepare_stage(run_dir: Path, manifest_path: Path) -> dict[str, Any]:
     state_map = {s["state_id"]: s for s in states}
     order_in_state: dict[str, int] = defaultdict(int)
 
-    interactive_src = run_dir / "interactive-site-src"
-    public_data = interactive_src / "public" / "data"
-    public_screens = interactive_src / "public" / "screenshots"
-    public_data.mkdir(parents=True, exist_ok=True)
-    public_screens.mkdir(parents=True, exist_ok=True)
+    output_dir = run_dir / "interactive-site-static"
+    screenshots_dir = output_dir / "screenshots"
+    screenshots_dir.mkdir(parents=True, exist_ok=True)
 
-    # Copy unique screenshots into interactive site public assets.
+    # Copy unique screenshots into output dir and build public path map.
     screenshot_public_map: dict[str, str] = {}
     for state in states:
         src = Path(state["screenshot"])
         if not src.exists():
             raise SystemExit(f"Missing screenshot from state manifest: {src}")
-        dst = public_screens / src.name
+        dst = screenshots_dir / src.name
         shutil.copy2(src, dst)
         screenshot_public_map[state["screenshot"]] = f"screenshots/{src.name}"
 
@@ -170,18 +168,67 @@ def prepare_stage(run_dir: Path, manifest_path: Path) -> dict[str, Any]:
         if st["tab"] not in tabs:
             tabs.append(st["tab"])
 
+    # Build paired views: merge light/dark states per tab into unified views.
+    # Each view has screenshot_light and screenshot_dark, hotspots are shared.
+    light_states = [s for s in states if "light" in s["state"]]
+    dark_states = [s for s in states if "dark" in s["state"]]
+
+    # Build dark lookup: tab -> list of dark states
+    dark_by_tab: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for ds in dark_states:
+        dark_by_tab[ds["tab"]].append(ds)
+
+    views: list[dict[str, Any]] = []
+    for ls in light_states:
+        tab = ls["tab"]
+        # Try to find a matching dark state (same sub-variant or fallback to primary)
+        light_variant = ls["state"].replace("light-", "").replace("light", "")
+        dark_match = None
+        for ds in dark_by_tab.get(tab, []):
+            dark_variant = ds["state"].replace("dark-", "").replace("dark", "")
+            if dark_variant == light_variant:
+                dark_match = ds
+                break
+        # If no exact variant match, check for a generic (no-variant) dark state.
+        # Only assign it to the FIRST light variant for this tab (the default sub-view).
+        # Non-default sub-views get no dark_match → fall back to light screenshot (line 206).
+        if dark_match is None and dark_by_tab.get(tab):
+            first_light_for_tab = next((s for s in light_states if s["tab"] == tab), None)
+            if first_light_for_tab and first_light_for_tab["state_id"] == ls["state_id"]:
+                for ds in dark_by_tab[tab]:
+                    dark_variant = ds["state"].replace("dark-", "").replace("dark", "")
+                    if dark_variant == "":
+                        dark_match = ds
+                        break
+
+        view_id = ls["state_id"].replace("-light", "").replace("light-", "").replace("light", ls["tab"])
+        if view_id == ls["tab"]:
+            view_id = ls["tab"]
+
+        view = {
+            "view_id": ls["state_id"],  # keep original as key for hotspot lookup
+            "tab": tab,
+            "variant": light_variant or "default",
+            "nav_label": ls["nav_label"],
+            "screenshot_light": screenshot_public_map[ls["screenshot"]],
+            "screenshot_dark": screenshot_public_map[dark_match["screenshot"]] if dark_match else screenshot_public_map[ls["screenshot"]],
+            "full_width": ls["full_width"],
+            "full_height": ls["full_height"],
+            "hotspot_ids": ls["hotspot_ids"],
+        }
+        views.append(view)
+
     hotspot_manifest = {
         "generated_at": dt.datetime.now(dt.UTC).isoformat(),
         "canonical_context": ctx,
         "tabs": tabs,
+        "views": views,
         "states": [
             {
                 "state_id": st["state_id"],
                 "tab": st["tab"],
                 "state": st["state"],
                 "nav_label": st["nav_label"],
-                "expected_text": st["expected_text"],
-                "screenshot": st["screenshot"],
                 "screenshot_public": screenshot_public_map[st["screenshot"]],
                 "full_width": st["full_width"],
                 "full_height": st["full_height"],
@@ -204,23 +251,390 @@ def prepare_stage(run_dir: Path, manifest_path: Path) -> dict[str, Any]:
     write_json(hotspot_manifest_path, hotspot_manifest)
     write_json(story_content_path, story_content)
 
-    write_json(public_data / "hotspot_manifest.json", hotspot_manifest)
-    write_json(public_data / "story_content.json", story_content)
-
-    write_next_site_source(interactive_src)
+    # Write the single-page app directly to output dir.
+    write_single_page_app(output_dir, hotspot_manifest, story_content)
 
     return {
         "run_dir": str(run_dir),
         "hotspot_manifest": str(hotspot_manifest_path),
         "story_content": str(story_content_path),
-        "interactive_site_src": str(interactive_src),
+        "output_dir": str(output_dir),
         "hotspot_count": len(hotspots),
-        "state_count": len(states),
+        "view_count": len(views),
         "tab_count": len(tabs),
     }
 
 
-def write_next_site_source(interactive_src: Path) -> None:
+def write_single_page_app(
+    output_dir: Path,
+    hotspot_manifest: dict[str, Any],
+    story_content: dict[str, Any],
+) -> None:
+    """Write a self-contained single-page React walkthrough app."""
+    manifest_json = json.dumps(hotspot_manifest)
+    story_json = json.dumps(story_content)
+
+    html = f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>MMM Decision Walkthrough</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {{
+  darkMode: 'class',
+  theme: {{
+    extend: {{
+      colors: {{
+        accent: {{ DEFAULT: '#6366f1', light: '#818cf8', dim: '#4f46e5' }},
+        surface: {{ dark: '#0a0a0b', light: '#fafafa' }},
+        card: {{ dark: 'rgba(17,17,20,0.95)', light: 'rgba(255,255,255,0.95)' }},
+      }}
+    }}
+  }}
+}}
+</script>
+<script crossorigin src="https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js"></script>
+<script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@babel/standalone@7.26.10/babel.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+* {{ box-sizing: border-box; margin: 0; padding: 0; }}
+html, body, #root {{ height: 100vh; overflow: hidden; font-family: 'Inter', system-ui, sans-serif; }}
+body {{ background: #0a0a0b; color: #fff; transition: background 300ms, color 300ms; }}
+body.light {{ background: #fafafa; color: #0a0a0b; }}
+
+.pill {{ background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); backdrop-filter: blur(12px); }}
+body.light .pill {{ background: rgba(0,0,0,0.04); border-color: rgba(0,0,0,0.08); }}
+
+.drawer {{ background: rgba(17,17,20,0.95); border-left: 1px solid rgba(255,255,255,0.08); backdrop-filter: blur(20px); }}
+body.light .drawer {{ background: rgba(255,255,255,0.95); border-left-color: rgba(0,0,0,0.08); }}
+
+.hotspot-ring {{ border: 2px solid rgba(99,102,241,0.6); background: rgba(99,102,241,0.08); transition: all 150ms ease; }}
+.hotspot-ring:hover, .hotspot-ring.active {{ border-color: #6366f1; background: rgba(99,102,241,0.18); box-shadow: 0 0 0 3px rgba(99,102,241,0.25); }}
+.hotspot-badge {{ position: absolute; top: -10px; left: -10px; min-width: 22px; height: 22px; border-radius: 999px; background: #6366f1; color: #fff; font-size: 11px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; border: 2px solid #0a0a0b; }}
+body.light .hotspot-badge {{ border-color: #fafafa; }}
+
+@keyframes pulse-ring {{ 0% {{ opacity: 0.4; transform: scale(1); }} 100% {{ opacity: 0; transform: scale(1.08); }} }}
+.pulse {{ position: absolute; inset: -4px; border-radius: inherit; border: 2px solid rgba(99,102,241,0.5); animation: pulse-ring 1.2s ease-out infinite; pointer-events: none; }}
+
+.section-label {{ font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: #6366f1; font-weight: 600; margin-bottom: 4px; }}
+body.light .section-label {{ color: #4f46e5; }}
+
+.text-secondary {{ color: #94a3b8; }}
+body.light .text-secondary {{ color: #64748b; }}
+
+.border-subtle {{ border-color: rgba(255,255,255,0.08); }}
+body.light .border-subtle {{ border-color: rgba(0,0,0,0.08); }}
+
+.formula-block {{ font-family: ui-monospace, SFMono-Regular, monospace; font-size: 12px; background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.15); border-radius: 6px; padding: 8px; }}
+
+.screenshot-stage {{ position: relative; overflow-y: auto; overflow-x: hidden; }}
+.screenshot-stage img {{ width: 100%; display: block; }}
+
+.drawer-enter {{ transform: translateX(100%); }}
+.drawer-visible {{ transform: translateX(0); transition: transform 300ms cubic-bezier(0.32,0.72,0,1); }}
+.drawer-exit {{ transform: translateX(100%); transition: transform 200ms ease-in; }}
+
+.tooltip {{ position: absolute; z-index: 50; max-width: 280px; background: rgba(8,24,34,0.95); color: #f5fafb; border: 1px solid rgba(255,255,255,0.15); border-radius: 10px; padding: 10px 12px; font-size: 12px; line-height: 1.45; box-shadow: 0 14px 36px rgba(0,0,0,0.35); pointer-events: none; }}
+body.light .tooltip {{ background: rgba(255,255,255,0.97); color: #0a0a0b; border-color: rgba(0,0,0,0.1); box-shadow: 0 14px 36px rgba(0,0,0,0.12); }}
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script>
+window.__HOTSPOT_MANIFEST__ = {manifest_json};
+window.__STORY_CONTENT__ = {story_json};
+</script>
+
+<script type="text/babel" data-type="module">
+const {{ useState, useMemo, useEffect, useRef, useCallback }} = React;
+
+const TAB_TITLE = {{
+  home: 'Home',
+  'sales-impact': 'Sales Impact',
+  'response-curves': 'Response Curves',
+  'budget-allocator': 'Budget Allocator',
+  experiment: 'Simulator',
+  insights: 'Insights',
+  settings: 'Settings',
+  geography: 'Geography',
+}};
+
+function App() {{
+  const manifest = window.__HOTSPOT_MANIFEST__;
+  const storyContent = window.__STORY_CONTENT__;
+  const tabs = manifest.tabs;
+  const views = manifest.views;
+  const allHotspots = manifest.hotspots;
+  const storyMap = useMemo(() => {{
+    const m = {{}};
+    for (const row of storyContent.rows) m[row.component_id] = row;
+    return m;
+  }}, []);
+
+  const [tabIndex, setTabIndex] = useState(0);
+  const [isDark, setIsDark] = useState(true);
+  const [activeHotspotId, setActiveHotspotId] = useState(null);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [hoveredHotspot, setHoveredHotspot] = useState(null);
+  const [mode, setMode] = useState('guided');
+  const tooltipRef = useRef(null);
+  const containerRef = useRef(null);
+
+  const currentTab = tabs[tabIndex];
+
+  // Get views for current tab
+  const tabViews = useMemo(() => views.filter(v => v.tab === currentTab), [currentTab, views]);
+  const [viewIndex, setViewIndex] = useState(0);
+  const currentView = tabViews[viewIndex] || tabViews[0];
+
+  // Reset view index when tab changes
+  useEffect(() => {{
+    setViewIndex(0);
+    setActiveHotspotId(null);
+    setDrawerOpen(false);
+    setHoveredHotspot(null);
+  }}, [tabIndex]);
+
+  // Get hotspots for current view
+  const viewHotspots = useMemo(() => {{
+    if (!currentView) return [];
+    const ids = new Set(currentView.hotspot_ids);
+    return allHotspots
+      .filter(h => ids.has(h.hotspot_id))
+      .sort((a, b) => a.order_in_state - b.order_in_state);
+  }}, [currentView, allHotspots]);
+
+  const activeStory = useMemo(() => {{
+    if (!activeHotspotId) return null;
+    const hs = viewHotspots.find(h => h.hotspot_id === activeHotspotId);
+    return hs ? storyMap[hs.component_id] : null;
+  }}, [activeHotspotId, viewHotspots, storyMap]);
+
+  const activeHotspot = viewHotspots.find(h => h.hotspot_id === activeHotspotId);
+
+  // Screenshot path based on theme
+  const screenshotSrc = currentView
+    ? (isDark ? currentView.screenshot_dark : currentView.screenshot_light)
+    : '';
+
+  // Theme toggle
+  useEffect(() => {{
+    document.body.classList.toggle('light', !isDark);
+  }}, [isDark]);
+
+  const handleHotspotClick = useCallback((hs) => {{
+    setActiveHotspotId(hs.hotspot_id);
+    setDrawerOpen(true);
+  }}, []);
+
+  const handleHotspotHover = useCallback((hs, e) => {{
+    if (mode === 'free') {{
+      setActiveHotspotId(hs.hotspot_id);
+      setDrawerOpen(true);
+    }}
+    setHoveredHotspot({{ hs, x: e.clientX, y: e.clientY }});
+  }}, [mode]);
+
+  const closeDrawer = useCallback(() => {{
+    setDrawerOpen(false);
+    setActiveHotspotId(null);
+  }}, []);
+
+  const nextTab = () => setTabIndex(i => Math.min(i + 1, tabs.length - 1));
+  const prevTab = () => setTabIndex(i => Math.max(i - 1, 0));
+
+  const activeIdx = viewHotspots.findIndex(h => h.hotspot_id === activeHotspotId);
+
+  return (
+    <div className="h-screen w-screen flex flex-col overflow-hidden relative">
+      {{/* Floating Pill Nav - top center */}}
+      <div className="absolute top-4 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2 pill rounded-full px-3 py-1.5"
+           style={{{{ transform: drawerOpen ? 'translateX(calc(-50% - 190px))' : 'translateX(-50%)' , transition: 'transform 300ms cubic-bezier(0.32,0.72,0,1)' }}}}>
+        <button onClick={{prevTab}} disabled={{tabIndex === 0}}
+                className="text-sm opacity-60 hover:opacity-100 disabled:opacity-20 cursor-pointer disabled:cursor-default">
+          &#8592;
+        </button>
+        <span className="text-sm font-semibold">{{TAB_TITLE[currentTab] || currentTab}}</span>
+        <span className="text-xs text-secondary">{{tabIndex + 1}} / {{tabs.length}}</span>
+        <button onClick={{nextTab}} disabled={{tabIndex === tabs.length - 1}}
+                className="text-sm opacity-60 hover:opacity-100 disabled:opacity-20 cursor-pointer disabled:cursor-default">
+          &#8594;
+        </button>
+
+        {{/* Sub-view selector (if tab has multiple views) */}}
+        {{tabViews.length > 1 && (
+          <div className="flex items-center gap-1 ml-2 pl-2 border-l border-subtle">
+            {{tabViews.map((v, i) => (
+              <button key={{v.view_id}} onClick={{() => {{ setViewIndex(i); setActiveHotspotId(null); setDrawerOpen(false); }}}}
+                      className={{`text-xs px-2 py-0.5 rounded-full cursor-pointer ${{i === viewIndex ? 'bg-accent text-white' : 'text-secondary hover:text-white'}}`}}>
+                {{v.variant === 'default' ? 'Default' : v.variant.charAt(0).toUpperCase() + v.variant.slice(1)}}
+              </button>
+            ))}}
+          </div>
+        )}}
+      </div>
+
+      {{/* Screenshot Stage */}}
+      <div className="flex-1 min-h-0 flex flex-col items-center p-4 pt-14 pb-12 overflow-hidden"
+           style={{{{ paddingRight: drawerOpen ? '396px' : '16px', transition: 'padding-right 300ms cubic-bezier(0.32,0.72,0,1)' }}}}>
+        <div ref={{containerRef}} className="screenshot-stage w-full max-h-full rounded-lg"
+             style={{{{ border: '1px solid', borderColor: isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.06)' }}}}>
+          <div style={{{{ position: 'relative', width: '100%' }}}}>
+            <img src={{screenshotSrc}} alt={{`${{currentTab}} dashboard`}}
+                 style={{{{ width: '100%', display: 'block' }}}} draggable="false"/>
+
+            {{/* Hotspot overlay — matches image exactly */}}
+            <div style={{{{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none' }}}}>
+              {{viewHotspots.map((hs, idx) => {{
+                const isActive = activeHotspotId === hs.hotspot_id;
+                return (
+                  <button key={{hs.hotspot_id}}
+                          className={{`absolute hotspot-ring rounded-lg cursor-pointer ${{isActive ? 'active' : ''}}`}}
+                          style={{{{
+                            left: `${{hs.bbox_pct.x}}%`,
+                            top: `${{hs.bbox_pct.y}}%`,
+                            width: `${{hs.bbox_pct.width}}%`,
+                            height: `${{hs.bbox_pct.height}}%`,
+                            zIndex: hs.z_index,
+                            pointerEvents: 'auto',
+                          }}}}
+                          onClick={{() => handleHotspotClick(hs)}}
+                          onMouseEnter={{(e) => handleHotspotHover(hs, e)}}
+                          onMouseLeave={{() => setHoveredHotspot(null)}}
+                          aria-label={{`${{idx + 1}}. ${{hs.tooltip_summary.title}}`}}>
+                    <span className="hotspot-badge">{{idx + 1}}</span>
+                    {{isActive && <span className="pulse rounded-lg"></span>}}
+                  </button>
+                );
+              }})}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{/* Tooltip on hover */}}
+      {{hoveredHotspot && !drawerOpen && (
+        <div className="tooltip"
+             style={{{{ top: Math.max(10, hoveredHotspot.y - 120), left: Math.min(hoveredHotspot.x + 16, window.innerWidth - 300) }}}}>
+          <div className="font-bold mb-1">{{hoveredHotspot.hs.tooltip_summary.title}}</div>
+          <div className="opacity-70 mb-1">{{hoveredHotspot.hs.tooltip_summary.business_question}}</div>
+          <div style={{{{ color: '#fbbf24' }}}} className="font-semibold text-xs">{{hoveredHotspot.hs.tooltip_summary.kpi_name}}</div>
+        </div>
+      )}}
+
+      {{/* Slide-over Drawer */}}
+      <div className={{`fixed top-0 right-0 bottom-0 w-[380px] drawer z-40 overflow-y-auto ${{drawerOpen ? 'drawer-visible' : 'drawer-enter'}}`}}
+           style={{{{ display: drawerOpen || activeStory ? 'block' : 'none' }}}}>
+        {{activeStory && (
+          <div className="p-5">
+            <div className="flex justify-between items-start mb-4">
+              <div>
+                <h2 className="text-base font-semibold">{{activeStory.title}}</h2>
+                <p className="text-xs text-secondary mt-1">{{activeStory.kpi_name}}</p>
+              </div>
+              <button onClick={{closeDrawer}} className="text-secondary hover:text-white cursor-pointer text-lg">&#10005;</button>
+            </div>
+            <div className="border-t border-subtle mb-4"></div>
+
+            {{/* Stepper */}}
+            <div className="flex items-center gap-2 mb-4">
+              {{viewHotspots.map((hs, idx) => (
+                <button key={{hs.hotspot_id}}
+                        onClick={{() => handleHotspotClick(hs)}}
+                        className={{`w-7 h-7 rounded-full text-xs font-bold cursor-pointer ${{
+                          activeHotspotId === hs.hotspot_id
+                            ? 'bg-accent text-white'
+                            : 'border border-subtle text-secondary hover:text-white'
+                        }}`}}>
+                  {{idx + 1}}
+                </button>
+              ))}}
+            </div>
+
+            <Section label="Why It Exists" text={{activeStory.why_this_exists}} />
+            <Section label="What It Means" text={{activeStory.kpi_or_chart_definition}} />
+            <Section label="Formula" text={{activeStory.formula}} isCode />
+            <Section label="Inputs" text={{Array.isArray(activeStory.inputs) ? activeStory.inputs.join(', ') : activeStory.inputs}} />
+            <Section label="Good vs Risk" text={{activeStory.how_to_read_good_vs_risk}} />
+            <Section label="Decision Supported" text={{activeStory.decision_supported}} />
+            <Section label="Recommended Action" text={{activeStory.recommended_next_action}} />
+            <Section label="Misinterpretation Risk" text={{activeStory.misinterpretation_risks}} />
+            <Section label="Caveat" text={{activeStory.data_freshness_or_caveats}} />
+            {{activeStory.worked_example && activeStory.worked_example !== 'N/A' && (
+              <Section label="Worked Example" text={{activeStory.worked_example}} />
+            )}}
+          </div>
+        )}}
+      </div>
+
+      {{/* Floating Toolbar - bottom right */}}
+      <div className="absolute bottom-3 right-4 z-30 flex items-center gap-2"
+           style={{{{ right: drawerOpen ? '396px' : '16px', transition: 'right 300ms cubic-bezier(0.32,0.72,0,1)' }}}}>
+        {{/* Theme toggle */}}
+        <button onClick={{() => setIsDark(d => !d)}} className="pill rounded-full px-3 py-1.5 flex items-center gap-2 cursor-pointer"
+                title={{isDark ? 'Switch to light mode' : 'Switch to dark mode'}}>
+          <span className={{isDark ? 'opacity-40' : 'text-amber-400'}}>&#9788;</span>
+          <div className="w-8 h-4 rounded-full relative" style={{{{ background: isDark ? '#333' : '#d1d5db' }}}}>
+            <div className="w-3 h-3 rounded-full bg-white absolute top-0.5 transition-all duration-200"
+                 style={{{{ left: isDark ? '18px' : '2px' }}}}></div>
+          </div>
+          <span className={{isDark ? 'text-blue-300' : 'opacity-40'}}>&#9790;</span>
+        </button>
+        {{/* Mode toggle */}}
+        <button onClick={{() => setMode(m => m === 'guided' ? 'free' : 'guided')}}
+                className="pill rounded-full px-3 py-1.5 text-xs text-secondary cursor-pointer">
+          {{mode === 'guided' ? 'Guided' : 'Free Hover'}}
+        </button>
+        {{/* Counter */}}
+        {{activeIdx >= 0 && (
+          <div className="pill rounded-full px-3 py-1.5 text-xs text-secondary">
+            {{activeIdx + 1}} / {{viewHotspots.length}}
+          </div>
+        )}}
+      </div>
+
+      {{/* Progress Dots - bottom center */}}
+      <div className="absolute bottom-3.5 left-1/2 -translate-x-1/2 z-30 flex gap-1.5"
+           style={{{{ transform: drawerOpen ? 'translateX(calc(-50% - 190px))' : 'translateX(-50%)', transition: 'transform 300ms cubic-bezier(0.32,0.72,0,1)' }}}}>
+        {{tabs.map((t, i) => (
+          <button key={{t}} onClick={{() => setTabIndex(i)}}
+                  className={{`w-2 h-2 rounded-full cursor-pointer transition-colors ${{i === tabIndex ? 'bg-accent' : 'bg-gray-600 hover:bg-gray-400'}}`}}
+                  title={{TAB_TITLE[t] || t}} />
+        ))}}
+      </div>
+    </div>
+  );
+}}
+
+function Section({{ label, text, isCode }}) {{
+  if (!text || text === 'N/A') return null;
+  return (
+    <div className="mb-3">
+      <div className="section-label">{{label}}</div>
+      {{isCode ? (
+        <pre className="formula-block whitespace-pre-wrap">{{text}}</pre>
+      ) : (
+        <p className="text-sm leading-relaxed text-secondary">{{text}}</p>
+      )}}
+    </div>
+  );
+}}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+</script>
+</body>
+</html>"""
+
+    write_text(output_dir / "index.html", html)
+
+
+def _legacy_write_next_site_source(interactive_src: Path) -> None:
+    """Legacy Next.js multi-page site generator. Kept for reference."""
     write_text(
         interactive_src / "package.json",
         """{
@@ -1110,20 +1524,24 @@ def build_final_qa(run_dir: Path) -> dict[str, Any]:
         if not shot.exists():
             screenshot_missing.append(st["screenshot_public"])
 
-    status = subprocess.run(
-        ["/bin/zsh", "-lc", "git -C /Users/amank/Code/marketing-mix status --short"],
-        capture_output=True,
-        text=True,
-        check=False,
-    )
     bad_paths = []
-    for line in status.stdout.splitlines():
-        if not line.strip():
-            continue
-        parts = line.split()
-        p = parts[-1]
-        if not p.startswith("temp/"):
-            bad_paths.append(p)
+    try:
+        status = subprocess.run(
+            ["git", "status", "--short"],
+            capture_output=True,
+            text=True,
+            check=False,
+            cwd=str(run_dir),
+        )
+        for line in status.stdout.splitlines():
+            if not line.strip():
+                continue
+            parts = line.split()
+            p = parts[-1]
+            if not p.startswith("temp/"):
+                bad_paths.append(p)
+    except (FileNotFoundError, OSError):
+        pass  # git not available or not in a repo - skip hygiene check
 
     checks = {
         "tab_routes": {"ok": len(route_missing) == 0, "missing": route_missing},
@@ -1179,31 +1597,26 @@ def rewrite_static_html_for_file_mode(static_dir: Path) -> None:
 
 
 def finalize_stage(run_dir: Path) -> dict[str, Any]:
-    static_src = run_dir / "interactive-site-src" / "out"
+    """Finalize: the SPA is already written by prepare_stage. Just run QA and write docs."""
     static_dst = run_dir / "interactive-site-static"
 
-    if not static_src.exists():
+    if not (static_dst / "index.html").exists():
         raise SystemExit(
-            f"Static export not found at {static_src}. Run `npm run build` in interactive-site-src first."
+            f"index.html not found at {static_dst}. Run prepare stage first."
         )
-
-    if static_dst.exists():
-        shutil.rmtree(static_dst)
-    shutil.copytree(static_src, static_dst)
-    rewrite_static_html_for_file_mode(static_dst)
 
     open_html = run_dir / "docs" / "INTERACTIVE_WALKTHROUGH_OPEN.html"
     write_text(
         open_html,
         """<!doctype html>
-<html lang=\"en\">
+<html lang="en">
 <head>
-  <meta charset=\"utf-8\" />
-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
-  <meta http-equiv=\"refresh\" content=\"0; url=../interactive-site-static/index.html\" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="refresh" content="0; url=../interactive-site-static/index.html" />
   <title>MMM Decision Walkthrough</title>
   <script>
-    window.location.replace(\"../interactive-site-static/index.html\");
+    window.location.replace("../interactive-site-static/index.html");
   </script>
   <style>
     body {
@@ -1219,7 +1632,7 @@ def finalize_stage(run_dir: Path) -> dict[str, Any]:
   </style>
 </head>
 <body>
-  <p>Redirecting to MMM Decision Walkthrough. <a href=\"../interactive-site-static/index.html\">Open now</a></p>
+  <p>Redirecting to MMM Decision Walkthrough. <a href="../interactive-site-static/index.html">Open now</a></p>
 </body>
 </html>
 """,
@@ -1232,15 +1645,16 @@ def finalize_stage(run_dir: Path) -> dict[str, Any]:
     walkthrough_md = run_dir / "docs" / "FINAL_WALKTHROUGH.md"
     write_text(
         walkthrough_md,
-        f"""# Final Walkthrough: Interactive Storybook-Style Dashboard
+        f"""# Final Walkthrough: Interactive Dashboard Documentation
 
 ## Run
 - Run directory: `{run_dir}`
 - Generated: `{dt.datetime.now(dt.UTC).strftime('%Y-%m-%d %H:%M UTC')}`
 
 ## Deliverables
-- Interactive open entry: `{open_html}`
-- Static export: `{static_dst}`
+- Interactive entry: `{open_html}`
+- Single-page app: `{static_dst / 'index.html'}`
+- Screenshots: `{static_dst / 'screenshots'}`
 - Hotspot manifest: `{run_dir / 'manifests' / 'hotspot_manifest.json'}`
 - Story content: `{run_dir / 'manifests' / 'story_content.json'}`
 - QA report: `{report_path}`
@@ -1252,9 +1666,12 @@ def finalize_stage(run_dir: Path) -> dict[str, Any]:
 - Hotspots: `{report['checks']['counts']['hotspots']}`
 - Story rows: `{report['checks']['counts']['stories']}`
 
-## Notes
-- One route per tab (`/tab/<tab>`), guided + free-hover modes, Framer Motion transitions, and Radix tooltip summaries.
-- All artifacts produced under `temp/dashboard-docs` only.
+## Architecture
+- Single-page React SPA (index.html + screenshots/)
+- No build step required — works from file:// protocol
+- Synced dark/light theme toggle
+- Viewport-locked layout with floating navigation
+- shadcn/ui-inspired components via Tailwind CSS
 """,
     )
 

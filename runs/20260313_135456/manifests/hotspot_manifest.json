@@ -1,0 +1,2176 @@
+{
+  "generated_at": "2026-03-15T14:29:26.872109+00:00",
+  "canonical_context": {
+    "country": "France",
+    "product": "france_mavenclad_snowflake",
+    "year": 2023,
+    "version": "latest",
+    "data_source": "snowflake"
+  },
+  "tabs": [
+    "home",
+    "sales-impact",
+    "response-curves",
+    "budget-allocator",
+    "experiment",
+    "insights",
+    "geography",
+    "settings"
+  ],
+  "views": [
+    {
+      "view_id": "home-light",
+      "tab": "home",
+      "variant": "default",
+      "nav_label": "Home",
+      "screenshot_light": "screenshots/001-home-light-map.png",
+      "screenshot_dark": "screenshots/013-home-dark-map.png",
+      "full_width": 1680,
+      "full_height": 1954,
+      "hotspot_ids": [
+        "HS_001",
+        "HS_002",
+        "HS_003",
+        "HS_004",
+        "HS_005",
+        "HS_006",
+        "HS_046"
+      ]
+    },
+    {
+      "view_id": "sales-impact-light",
+      "tab": "sales-impact",
+      "variant": "default",
+      "nav_label": "Sales Impact",
+      "screenshot_light": "screenshots/002-sales-impact-light-map.png",
+      "screenshot_dark": "screenshots/014-sales-impact-dark-map.png",
+      "full_width": 1680,
+      "full_height": 1558,
+      "hotspot_ids": [
+        "HS_007",
+        "HS_008",
+        "HS_009",
+        "HS_010"
+      ]
+    },
+    {
+      "view_id": "response-curves-light-revenue",
+      "tab": "response-curves",
+      "variant": "revenue",
+      "nav_label": "Response Curves",
+      "screenshot_light": "screenshots/003-response-curves-light-revenue-map.png",
+      "screenshot_dark": "screenshots/015-response-curves-dark-map.png",
+      "full_width": 1680,
+      "full_height": 1296,
+      "hotspot_ids": [
+        "HS_011",
+        "HS_012"
+      ]
+    },
+    {
+      "view_id": "response-curves-light-mroi",
+      "tab": "response-curves",
+      "variant": "mroi",
+      "nav_label": "Response Curves",
+      "screenshot_light": "screenshots/004-response-curves-light-mroi-map.png",
+      "screenshot_dark": "screenshots/004-response-curves-light-mroi-map.png",
+      "full_width": 1680,
+      "full_height": 1296,
+      "hotspot_ids": [
+        "HS_013"
+      ]
+    },
+    {
+      "view_id": "response-curves-light-saturation",
+      "tab": "response-curves",
+      "variant": "saturation",
+      "nav_label": "Response Curves",
+      "screenshot_light": "screenshots/005-response-curves-light-saturation-map.png",
+      "screenshot_dark": "screenshots/005-response-curves-light-saturation-map.png",
+      "full_width": 1680,
+      "full_height": 1296,
+      "hotspot_ids": [
+        "HS_014"
+      ]
+    },
+    {
+      "view_id": "budget-allocator-light-optimize",
+      "tab": "budget-allocator",
+      "variant": "optimize",
+      "nav_label": "Budget Allocator",
+      "screenshot_light": "screenshots/006-budget-allocator-light-optimize-map.png",
+      "screenshot_dark": "screenshots/016-budget-allocator-dark-map.png",
+      "full_width": 1680,
+      "full_height": 1966,
+      "hotspot_ids": [
+        "HS_015",
+        "HS_016",
+        "HS_017",
+        "HS_018",
+        "HS_019"
+      ]
+    },
+    {
+      "view_id": "budget-allocator-light-what-if",
+      "tab": "budget-allocator",
+      "variant": "what-if",
+      "nav_label": "Budget Allocator",
+      "screenshot_light": "screenshots/007-budget-allocator-light-what-if-map.png",
+      "screenshot_dark": "screenshots/007-budget-allocator-light-what-if-map.png",
+      "full_width": 1680,
+      "full_height": 2105,
+      "hotspot_ids": [
+        "HS_020"
+      ]
+    },
+    {
+      "view_id": "experiment-light",
+      "tab": "experiment",
+      "variant": "default",
+      "nav_label": "Simulator",
+      "screenshot_light": "screenshots/008-experiment-light-map.png",
+      "screenshot_dark": "screenshots/017-experiment-dark-map.png",
+      "full_width": 1680,
+      "full_height": 3069,
+      "hotspot_ids": [
+        "HS_021",
+        "HS_022",
+        "HS_023"
+      ]
+    },
+    {
+      "view_id": "insights-light",
+      "tab": "insights",
+      "variant": "default",
+      "nav_label": "Insights",
+      "screenshot_light": "screenshots/009-insights-light-map.png",
+      "screenshot_dark": "screenshots/018-insights-dark-map.png",
+      "full_width": 1680,
+      "full_height": 2460,
+      "hotspot_ids": [
+        "HS_024",
+        "HS_025",
+        "HS_026",
+        "HS_027",
+        "HS_028",
+        "HS_029"
+      ]
+    },
+    {
+      "view_id": "geography-light-advanced",
+      "tab": "geography",
+      "variant": "advanced",
+      "nav_label": "Geography",
+      "screenshot_light": "screenshots/011-geography-light-advanced-map.png",
+      "screenshot_dark": "screenshots/020-geography-dark-map.png",
+      "full_width": 1680,
+      "full_height": 2868,
+      "hotspot_ids": [
+        "HS_034",
+        "HS_035",
+        "HS_036"
+      ]
+    },
+    {
+      "view_id": "geography-light-basic",
+      "tab": "geography",
+      "variant": "basic",
+      "nav_label": "Geography",
+      "screenshot_light": "screenshots/012-geography-light-basic-map.png",
+      "screenshot_dark": "screenshots/012-geography-light-basic-map.png",
+      "full_width": 1680,
+      "full_height": 1080,
+      "hotspot_ids": [
+        "HS_037"
+      ]
+    },
+    {
+      "view_id": "settings-light",
+      "tab": "settings",
+      "variant": "default",
+      "nav_label": "System Flow & Settings",
+      "screenshot_light": "screenshots/010-settings-light-map.png",
+      "screenshot_dark": "screenshots/019-settings-dark-map.png",
+      "full_width": 1680,
+      "full_height": 1080,
+      "hotspot_ids": [
+        "HS_030",
+        "HS_031",
+        "HS_032",
+        "HS_033"
+      ]
+    }
+  ],
+  "states": [
+    {
+      "state_id": "home-light",
+      "tab": "home",
+      "state": "light",
+      "nav_label": "Home",
+      "screenshot_public": "screenshots/001-home-light-map.png",
+      "full_width": 1680,
+      "full_height": 1954,
+      "hotspot_ids": [
+        "HS_001",
+        "HS_002",
+        "HS_003",
+        "HS_004",
+        "HS_005",
+        "HS_006",
+        "HS_046"
+      ]
+    },
+    {
+      "state_id": "sales-impact-light",
+      "tab": "sales-impact",
+      "state": "light",
+      "nav_label": "Sales Impact",
+      "screenshot_public": "screenshots/002-sales-impact-light-map.png",
+      "full_width": 1680,
+      "full_height": 1558,
+      "hotspot_ids": [
+        "HS_007",
+        "HS_008",
+        "HS_009",
+        "HS_010"
+      ]
+    },
+    {
+      "state_id": "response-curves-light-revenue",
+      "tab": "response-curves",
+      "state": "light-revenue",
+      "nav_label": "Response Curves",
+      "screenshot_public": "screenshots/003-response-curves-light-revenue-map.png",
+      "full_width": 1680,
+      "full_height": 1296,
+      "hotspot_ids": [
+        "HS_011",
+        "HS_012"
+      ]
+    },
+    {
+      "state_id": "response-curves-light-mroi",
+      "tab": "response-curves",
+      "state": "light-mroi",
+      "nav_label": "Response Curves",
+      "screenshot_public": "screenshots/004-response-curves-light-mroi-map.png",
+      "full_width": 1680,
+      "full_height": 1296,
+      "hotspot_ids": [
+        "HS_013"
+      ]
+    },
+    {
+      "state_id": "response-curves-light-saturation",
+      "tab": "response-curves",
+      "state": "light-saturation",
+      "nav_label": "Response Curves",
+      "screenshot_public": "screenshots/005-response-curves-light-saturation-map.png",
+      "full_width": 1680,
+      "full_height": 1296,
+      "hotspot_ids": [
+        "HS_014"
+      ]
+    },
+    {
+      "state_id": "budget-allocator-light-optimize",
+      "tab": "budget-allocator",
+      "state": "light-optimize",
+      "nav_label": "Budget Allocator",
+      "screenshot_public": "screenshots/006-budget-allocator-light-optimize-map.png",
+      "full_width": 1680,
+      "full_height": 1966,
+      "hotspot_ids": [
+        "HS_015",
+        "HS_016",
+        "HS_017",
+        "HS_018",
+        "HS_019"
+      ]
+    },
+    {
+      "state_id": "budget-allocator-light-what-if",
+      "tab": "budget-allocator",
+      "state": "light-what-if",
+      "nav_label": "Budget Allocator",
+      "screenshot_public": "screenshots/007-budget-allocator-light-what-if-map.png",
+      "full_width": 1680,
+      "full_height": 2105,
+      "hotspot_ids": [
+        "HS_020"
+      ]
+    },
+    {
+      "state_id": "experiment-light",
+      "tab": "experiment",
+      "state": "light",
+      "nav_label": "Simulator",
+      "screenshot_public": "screenshots/008-experiment-light-map.png",
+      "full_width": 1680,
+      "full_height": 3069,
+      "hotspot_ids": [
+        "HS_021",
+        "HS_022",
+        "HS_023"
+      ]
+    },
+    {
+      "state_id": "insights-light",
+      "tab": "insights",
+      "state": "light",
+      "nav_label": "Insights",
+      "screenshot_public": "screenshots/009-insights-light-map.png",
+      "full_width": 1680,
+      "full_height": 2460,
+      "hotspot_ids": [
+        "HS_024",
+        "HS_025",
+        "HS_026",
+        "HS_027",
+        "HS_028",
+        "HS_029"
+      ]
+    },
+    {
+      "state_id": "geography-light-advanced",
+      "tab": "geography",
+      "state": "light-advanced",
+      "nav_label": "Geography",
+      "screenshot_public": "screenshots/011-geography-light-advanced-map.png",
+      "full_width": 1680,
+      "full_height": 2868,
+      "hotspot_ids": [
+        "HS_034",
+        "HS_035",
+        "HS_036"
+      ]
+    },
+    {
+      "state_id": "geography-light-basic",
+      "tab": "geography",
+      "state": "light-basic",
+      "nav_label": "Geography",
+      "screenshot_public": "screenshots/012-geography-light-basic-map.png",
+      "full_width": 1680,
+      "full_height": 1080,
+      "hotspot_ids": [
+        "HS_037"
+      ]
+    },
+    {
+      "state_id": "settings-light",
+      "tab": "settings",
+      "state": "light",
+      "nav_label": "System Flow & Settings",
+      "screenshot_public": "screenshots/010-settings-light-map.png",
+      "full_width": 1680,
+      "full_height": 1080,
+      "hotspot_ids": [
+        "HS_030",
+        "HS_031",
+        "HS_032",
+        "HS_033"
+      ]
+    },
+    {
+      "state_id": "home-dark",
+      "tab": "home",
+      "state": "dark",
+      "nav_label": "Home",
+      "screenshot_public": "screenshots/013-home-dark-map.png",
+      "full_width": 1680,
+      "full_height": 2008,
+      "hotspot_ids": [
+        "HS_038"
+      ]
+    },
+    {
+      "state_id": "sales-impact-dark",
+      "tab": "sales-impact",
+      "state": "dark",
+      "nav_label": "Sales Impact",
+      "screenshot_public": "screenshots/014-sales-impact-dark-map.png",
+      "full_width": 1680,
+      "full_height": 1558,
+      "hotspot_ids": [
+        "HS_039"
+      ]
+    },
+    {
+      "state_id": "response-curves-dark",
+      "tab": "response-curves",
+      "state": "dark",
+      "nav_label": "Response Curves",
+      "screenshot_public": "screenshots/015-response-curves-dark-map.png",
+      "full_width": 1680,
+      "full_height": 1334,
+      "hotspot_ids": [
+        "HS_040"
+      ]
+    },
+    {
+      "state_id": "budget-allocator-dark",
+      "tab": "budget-allocator",
+      "state": "dark",
+      "nav_label": "Budget Allocator",
+      "screenshot_public": "screenshots/016-budget-allocator-dark-map.png",
+      "full_width": 1680,
+      "full_height": 1966,
+      "hotspot_ids": [
+        "HS_041"
+      ]
+    },
+    {
+      "state_id": "experiment-dark",
+      "tab": "experiment",
+      "state": "dark",
+      "nav_label": "Simulator",
+      "screenshot_public": "screenshots/017-experiment-dark-map.png",
+      "full_width": 1680,
+      "full_height": 3069,
+      "hotspot_ids": [
+        "HS_042"
+      ]
+    },
+    {
+      "state_id": "insights-dark",
+      "tab": "insights",
+      "state": "dark",
+      "nav_label": "Insights",
+      "screenshot_public": "screenshots/018-insights-dark-map.png",
+      "full_width": 1680,
+      "full_height": 2460,
+      "hotspot_ids": [
+        "HS_043"
+      ]
+    },
+    {
+      "state_id": "geography-dark",
+      "tab": "geography",
+      "state": "dark",
+      "nav_label": "Geography",
+      "screenshot_public": "screenshots/020-geography-dark-map.png",
+      "full_width": 1680,
+      "full_height": 2868,
+      "hotspot_ids": [
+        "HS_045"
+      ]
+    },
+    {
+      "state_id": "settings-dark",
+      "tab": "settings",
+      "state": "dark",
+      "nav_label": "System Flow & Settings",
+      "screenshot_public": "screenshots/019-settings-dark-map.png",
+      "full_width": 1680,
+      "full_height": 1080,
+      "hotspot_ids": [
+        "HS_044"
+      ]
+    }
+  ],
+  "hotspots": [
+    {
+      "hotspot_id": "HS_001",
+      "component_id": "TAB_HOME_OVERVIEW_SHELL",
+      "tab": "home",
+      "state": "light",
+      "state_id": "home-light",
+      "section": "tab-overview",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\001-home-light-map.png",
+      "screenshot_public": "screenshots/001-home-light-map.png",
+      "bbox": {
+        "x": 293.59375,
+        "y": 77,
+        "width": 276.5625,
+        "height": 48
+      },
+      "bbox_pct": {
+        "x": 17.475818,
+        "y": 3.940635,
+        "width": 16.462054,
+        "height": 2.456499
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Tab Orientation",
+        "business_question": "What is this tab for, and which decision should I make here?",
+        "kpi_name": "Navigation Context",
+        "one_line_value": "Verify selected context, then use the main KPI/graph below for decisioning."
+      },
+      "panel_ref": "TAB_HOME_OVERVIEW_SHELL",
+      "panel_payload": {
+        "component_id": "TAB_HOME_OVERVIEW_SHELL",
+        "tab": "home",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=home&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_002",
+      "component_id": "TAB_HOME_KPI_ROW",
+      "tab": "home",
+      "state": "light",
+      "state_id": "home-light",
+      "section": "kpi-row",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\001-home-light-map.png",
+      "screenshot_public": "screenshots/001-home-light-map.png",
+      "bbox": {
+        "x": 301.406,
+        "y": 164.688,
+        "width": 1314.609,
+        "height": 113.426
+      },
+      "bbox_pct": {
+        "x": 17.941,
+        "y": 8.428,
+        "width": 78.251,
+        "height": 5.806
+      },
+      "z_index": 22,
+      "order_in_state": 2,
+      "tooltip_summary": {
+        "title": "Topline KPI Row",
+        "business_question": "Do spend and incremental outcomes justify action now?",
+        "kpi_name": "Spend / Incremental / ROI",
+        "one_line_value": "If KPI signal is mixed, inspect Sales Impact and Insights before reallocating."
+      },
+      "panel_ref": "TAB_HOME_KPI_ROW",
+      "panel_payload": {
+        "component_id": "TAB_HOME_KPI_ROW",
+        "tab": "home",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=home&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_003",
+      "component_id": "TAB_HOME_ACTIONS_SCENARIOS",
+      "tab": "home",
+      "state": "light",
+      "state_id": "home-light",
+      "section": "quick-actions-and-scenarios",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\001-home-light-map.png",
+      "screenshot_public": "screenshots/001-home-light-map.png",
+      "bbox": {
+        "x": 293.594,
+        "y": 295,
+        "width": 1322.422,
+        "height": 310
+      },
+      "bbox_pct": {
+        "x": 17.476,
+        "y": 15.097,
+        "width": 78.716,
+        "height": 15.865
+      },
+      "z_index": 23,
+      "order_in_state": 3,
+      "tooltip_summary": {
+        "title": "Quick Actions",
+        "business_question": "Which module should I open next to answer the current planning question?",
+        "kpi_name": "Workflow Shortcuts",
+        "one_line_value": "Open the module matching your current decision intent (impact, curve, allocation, simulation)."
+      },
+      "panel_ref": "TAB_HOME_ACTIONS_SCENARIOS",
+      "panel_payload": {
+        "component_id": "TAB_HOME_ACTIONS_SCENARIOS",
+        "tab": "home",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=home&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_004",
+      "component_id": "TAB_HOME_MONTHLY_TREND",
+      "tab": "home",
+      "state": "light",
+      "state_id": "home-light",
+      "section": "monthly-trend",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\001-home-light-map.png",
+      "screenshot_public": "screenshots/001-home-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 613,
+        "width": 1358.796875,
+        "height": 306
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 31.371546,
+        "width": 80.880766,
+        "height": 15.660184
+      },
+      "z_index": 24,
+      "order_in_state": 4,
+      "tooltip_summary": {
+        "title": "Monthly Incremental Trend",
+        "business_question": "When in the year did incremental sales accelerate or stall?",
+        "kpi_name": "Monthly Incremental Sales",
+        "one_line_value": "Investigate channel-level contributions for abnormal months."
+      },
+      "panel_ref": "TAB_HOME_MONTHLY_TREND",
+      "panel_payload": {
+        "component_id": "TAB_HOME_MONTHLY_TREND",
+        "tab": "home",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=home&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_005",
+      "component_id": "TAB_HOME_CHANNEL_MIX",
+      "tab": "home",
+      "state": "light",
+      "state_id": "home-light",
+      "section": "channel-mix",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\001-home-light-map.png",
+      "screenshot_public": "screenshots/001-home-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 927,
+        "width": 1358.796875,
+        "height": 390
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 47.441146,
+        "width": 80.880766,
+        "height": 19.959058
+      },
+      "z_index": 25,
+      "order_in_state": 5,
+      "tooltip_summary": {
+        "title": "Channel Mix",
+        "business_question": "Which channels currently create the largest share of incremental impact?",
+        "kpi_name": "Contribution Share",
+        "one_line_value": "Use Response Curves to confirm headroom before scaling top-share channels."
+      },
+      "panel_ref": "TAB_HOME_CHANNEL_MIX",
+      "panel_payload": {
+        "component_id": "TAB_HOME_CHANNEL_MIX",
+        "tab": "home",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=home&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_006",
+      "component_id": "TAB_HOME_CROSS_PRODUCT_ROAS",
+      "tab": "home",
+      "state": "light",
+      "state_id": "home-light",
+      "section": "cross-product-roas",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\001-home-light-map.png",
+      "screenshot_public": "screenshots/001-home-light-map.png",
+      "bbox": {
+        "x": 301.406,
+        "y": 1330.335,
+        "width": 1314.609,
+        "height": 563.817
+      },
+      "bbox_pct": {
+        "x": 17.941,
+        "y": 68.083,
+        "width": 78.251,
+        "height": 28.854
+      },
+      "z_index": 26,
+      "order_in_state": 6,
+      "tooltip_summary": {
+        "title": "Cross-Product ROAS",
+        "business_question": "How does this product\u2019s efficiency compare with peers?",
+        "kpi_name": "Portfolio ROAS",
+        "one_line_value": "If lagging peers, run allocator and scenario simulations for recovery options."
+      },
+      "panel_ref": "TAB_HOME_CROSS_PRODUCT_ROAS",
+      "panel_payload": {
+        "component_id": "TAB_HOME_CROSS_PRODUCT_ROAS",
+        "tab": "home",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=home&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_007",
+      "component_id": "TAB_SALES_IMPACT_KPI_ROW",
+      "tab": "sales-impact",
+      "state": "light",
+      "state_id": "sales-impact-light",
+      "section": "kpi-row",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\002-sales-impact-light-map.png",
+      "screenshot_public": "screenshots/002-sales-impact-light-map.png",
+      "bbox": {
+        "x": 301.406,
+        "y": 84.688,
+        "width": 1314.609,
+        "height": 117.422
+      },
+      "bbox_pct": {
+        "x": 17.941,
+        "y": 5.436,
+        "width": 78.251,
+        "height": 7.536
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Model Credibility KPIs",
+        "business_question": "Is the model quality adequate for planning decisions?",
+        "kpi_name": "Model R\u00b2 and Totals",
+        "one_line_value": "If KPI signal is mixed, inspect Sales Impact and Insights before reallocating."
+      },
+      "panel_ref": "TAB_SALES_IMPACT_KPI_ROW",
+      "panel_payload": {
+        "component_id": "TAB_SALES_IMPACT_KPI_ROW",
+        "tab": "sales-impact",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=sales-impact&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_008",
+      "component_id": "TAB_SALES_IMPACT_ANNUAL_CHART",
+      "tab": "sales-impact",
+      "state": "light",
+      "state_id": "sales-impact-light",
+      "section": "annual-volume-impact",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\002-sales-impact-light-map.png",
+      "screenshot_public": "screenshots/002-sales-impact-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 216,
+        "width": 1358.796875,
+        "height": 572
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 13.863928,
+        "width": 80.880766,
+        "height": 36.713736
+      },
+      "z_index": 22,
+      "order_in_state": 2,
+      "tooltip_summary": {
+        "title": "Annual Volume Impact",
+        "business_question": "Which channels contributed most each month in relative terms?",
+        "kpi_name": "Monthly Share-of-Impact",
+        "one_line_value": "Investigate months with abrupt share shifts using channel absolute contributions."
+      },
+      "panel_ref": "TAB_SALES_IMPACT_ANNUAL_CHART",
+      "panel_payload": {
+        "component_id": "TAB_SALES_IMPACT_ANNUAL_CHART",
+        "tab": "sales-impact",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=sales-impact&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_009",
+      "component_id": "TAB_SALES_IMPACT_CHANNEL_CONTRIBUTIONS",
+      "tab": "sales-impact",
+      "state": "light",
+      "state_id": "sales-impact-light",
+      "section": "channel-contributions",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\002-sales-impact-light-map.png",
+      "screenshot_public": "screenshots/002-sales-impact-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 790,
+        "width": 1358.796875,
+        "height": 552
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 50.706033,
+        "width": 80.880766,
+        "height": 35.430039
+      },
+      "z_index": 23,
+      "order_in_state": 3,
+      "tooltip_summary": {
+        "title": "Channel Contributions",
+        "business_question": "What is the absolute incremental impact by channel over time?",
+        "kpi_name": "Absolute Incremental Contribution",
+        "one_line_value": "Use Response Curves to verify if top absolute contributors still have marginal headroom."
+      },
+      "panel_ref": "TAB_SALES_IMPACT_CHANNEL_CONTRIBUTIONS",
+      "panel_payload": {
+        "component_id": "TAB_SALES_IMPACT_CHANNEL_CONTRIBUTIONS",
+        "tab": "sales-impact",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=sales-impact&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_010",
+      "component_id": "TAB_SALES_IMPACT_NEXT_STEP_PROMPT",
+      "tab": "sales-impact",
+      "state": "light",
+      "state_id": "sales-impact-light",
+      "section": "next-step-prompt",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\002-sales-impact-light-map.png",
+      "screenshot_public": "screenshots/002-sales-impact-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 1432,
+        "width": 1358.796875,
+        "height": 86
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 91.912709,
+        "width": 80.880766,
+        "height": 5.519897
+      },
+      "z_index": 24,
+      "order_in_state": 4,
+      "tooltip_summary": {
+        "title": "Next Step Prompt",
+        "business_question": "What is the recommended next workflow step?",
+        "kpi_name": "Guided Workflow",
+        "one_line_value": "Follow prompt only after validating current tab\u2019s key evidence."
+      },
+      "panel_ref": "TAB_SALES_IMPACT_NEXT_STEP_PROMPT",
+      "panel_payload": {
+        "component_id": "TAB_SALES_IMPACT_NEXT_STEP_PROMPT",
+        "tab": "sales-impact",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=sales-impact&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_011",
+      "component_id": "TAB_RESPONSE_CURVES_MAIN_CHART_REVENUE",
+      "tab": "response-curves",
+      "state": "light-revenue",
+      "state_id": "response-curves-light-revenue",
+      "section": "main-curve-chart",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\003-response-curves-light-revenue-map.png",
+      "screenshot_public": "screenshots/003-response-curves-light-revenue-map.png",
+      "bbox": {
+        "x": 301.406,
+        "y": 322.411,
+        "width": 1314.609,
+        "height": 644.821
+      },
+      "bbox_pct": {
+        "x": 17.941,
+        "y": 24.877,
+        "width": 78.251,
+        "height": 49.755
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Primary Response Curves",
+        "business_question": "Where is additional spend still productive?",
+        "kpi_name": "Spend-Response Curve",
+        "one_line_value": "Shift marginal budget toward steeper curves, then validate in allocator."
+      },
+      "panel_ref": "TAB_RESPONSE_CURVES_MAIN_CHART_REVENUE",
+      "panel_payload": {
+        "component_id": "TAB_RESPONSE_CURVES_MAIN_CHART_REVENUE",
+        "tab": "response-curves",
+        "state": "light-revenue"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=response-curves&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_012",
+      "component_id": "TAB_RESPONSE_CURVES_CHANNEL_METRIC_CARDS",
+      "tab": "response-curves",
+      "state": "light-revenue",
+      "state_id": "response-curves-light-revenue",
+      "section": "channel-metric-cards",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\003-response-curves-light-revenue-map.png",
+      "screenshot_public": "screenshots/003-response-curves-light-revenue-map.png",
+      "bbox": {
+        "x": 293.59375,
+        "y": 986.5,
+        "width": 449.59375,
+        "height": 150
+      },
+      "bbox_pct": {
+        "x": 17.475818,
+        "y": 76.118827,
+        "width": 26.761533,
+        "height": 11.574074
+      },
+      "z_index": 22,
+      "order_in_state": 2,
+      "tooltip_summary": {
+        "title": "Per-Channel Metric Cards",
+        "business_question": "What are current spend, response, and efficiency signals per channel?",
+        "kpi_name": "Channel Snapshot Metrics",
+        "one_line_value": "Carry shortlisted channels into allocator constraints."
+      },
+      "panel_ref": "TAB_RESPONSE_CURVES_CHANNEL_METRIC_CARDS",
+      "panel_payload": {
+        "component_id": "TAB_RESPONSE_CURVES_CHANNEL_METRIC_CARDS",
+        "tab": "response-curves",
+        "state": "light-revenue"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=response-curves&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_013",
+      "component_id": "TAB_RESPONSE_CURVES_MAIN_CHART_MROI",
+      "tab": "response-curves",
+      "state": "light-mroi",
+      "state_id": "response-curves-light-mroi",
+      "section": "mroi-view",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\004-response-curves-light-mroi-map.png",
+      "screenshot_public": "screenshots/004-response-curves-light-mroi-map.png",
+      "bbox": {
+        "x": 301.406,
+        "y": 322.411,
+        "width": 1314.609,
+        "height": 644.821
+      },
+      "bbox_pct": {
+        "x": 17.941,
+        "y": 24.877,
+        "width": 78.251,
+        "height": 49.755
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Marginal ROI View",
+        "business_question": "What does the next unit of spend likely return right now?",
+        "kpi_name": "mROI",
+        "one_line_value": "Set or confirm channel-level stop/go thresholds using mROI ranking."
+      },
+      "panel_ref": "TAB_RESPONSE_CURVES_MAIN_CHART_MROI",
+      "panel_payload": {
+        "component_id": "TAB_RESPONSE_CURVES_MAIN_CHART_MROI",
+        "tab": "response-curves",
+        "state": "light-mroi"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=response-curves&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_014",
+      "component_id": "TAB_RESPONSE_CURVES_MAIN_CHART_SATURATION",
+      "tab": "response-curves",
+      "state": "light-saturation",
+      "state_id": "response-curves-light-saturation",
+      "section": "saturation-view",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\005-response-curves-light-saturation-map.png",
+      "screenshot_public": "screenshots/005-response-curves-light-saturation-map.png",
+      "bbox": {
+        "x": 301.406,
+        "y": 322.411,
+        "width": 1314.609,
+        "height": 644.821
+      },
+      "bbox_pct": {
+        "x": 17.941,
+        "y": 24.877,
+        "width": 78.251,
+        "height": 49.755
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Saturation View",
+        "business_question": "How close is each channel to its practical ceiling?",
+        "kpi_name": "Saturation %",
+        "one_line_value": "Reallocate from >70% saturation channels to lower-saturation channels if mROI also supports it."
+      },
+      "panel_ref": "TAB_RESPONSE_CURVES_MAIN_CHART_SATURATION",
+      "panel_payload": {
+        "component_id": "TAB_RESPONSE_CURVES_MAIN_CHART_SATURATION",
+        "tab": "response-curves",
+        "state": "light-saturation"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=response-curves&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_015",
+      "component_id": "TAB_BUDGET_ALLOCATOR_SCENARIO_BUILDER_OPTIMIZE",
+      "tab": "budget-allocator",
+      "state": "light-optimize",
+      "state_id": "budget-allocator-light-optimize",
+      "section": "scenario-builder-optimize",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\006-budget-allocator-light-optimize-map.png",
+      "screenshot_public": "screenshots/006-budget-allocator-light-optimize-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 75,
+        "width": 1358.796875,
+        "height": 506
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 3.814852,
+        "width": 80.880766,
+        "height": 25.737538
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Scenario Builder (Optimize)",
+        "business_question": "What constraints and objective should shape the optimized plan?",
+        "kpi_name": "Optimization Setup",
+        "one_line_value": "Set realistic min/max by channel, then run and inspect optimization metrics."
+      },
+      "panel_ref": "TAB_BUDGET_ALLOCATOR_SCENARIO_BUILDER_OPTIMIZE",
+      "panel_payload": {
+        "component_id": "TAB_BUDGET_ALLOCATOR_SCENARIO_BUILDER_OPTIMIZE",
+        "tab": "budget-allocator",
+        "state": "light-optimize"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=budget-allocator&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_016",
+      "component_id": "TAB_BUDGET_ALLOCATOR_OPTIMIZATION_METRICS",
+      "tab": "budget-allocator",
+      "state": "light-optimize",
+      "state_id": "budget-allocator-light-optimize",
+      "section": "optimization-metrics-table",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\006-budget-allocator-light-optimize-map.png",
+      "screenshot_public": "screenshots/006-budget-allocator-light-optimize-map.png",
+      "bbox": {
+        "x": 293.59375,
+        "y": 586,
+        "width": 674.390625,
+        "height": 452
+      },
+      "bbox_pct": {
+        "x": 17.475818,
+        "y": 29.806714,
+        "width": 40.142299,
+        "height": 22.990844
+      },
+      "z_index": 22,
+      "order_in_state": 2,
+      "tooltip_summary": {
+        "title": "Optimization Delta Table",
+        "business_question": "Is the recommended allocation materially better than current?",
+        "kpi_name": "Current vs Optimized Metrics",
+        "one_line_value": "If uplift is material, export and validate via simulator sensitivity checks."
+      },
+      "panel_ref": "TAB_BUDGET_ALLOCATOR_OPTIMIZATION_METRICS",
+      "panel_payload": {
+        "component_id": "TAB_BUDGET_ALLOCATOR_OPTIMIZATION_METRICS",
+        "tab": "budget-allocator",
+        "state": "light-optimize"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=budget-allocator&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_017",
+      "component_id": "TAB_BUDGET_ALLOCATOR_SCENARIO_RESULTS",
+      "tab": "budget-allocator",
+      "state": "light-optimize",
+      "state_id": "budget-allocator-light-optimize",
+      "section": "scenario-results-table",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\006-budget-allocator-light-optimize-map.png",
+      "screenshot_public": "screenshots/006-budget-allocator-light-optimize-map.png",
+      "bbox": {
+        "x": 967.984375,
+        "y": 586,
+        "width": 674.40625,
+        "height": 452
+      },
+      "bbox_pct": {
+        "x": 57.618118,
+        "y": 29.806714,
+        "width": 40.143229,
+        "height": 22.990844
+      },
+      "z_index": 23,
+      "order_in_state": 3,
+      "tooltip_summary": {
+        "title": "Scenario Results Table",
+        "business_question": "Which specific channels increase or decrease in the optimized plan?",
+        "kpi_name": "Channel-Level Allocation Deltas",
+        "one_line_value": "Flag large positive/negative deltas for commercial team validation."
+      },
+      "panel_ref": "TAB_BUDGET_ALLOCATOR_SCENARIO_RESULTS",
+      "panel_payload": {
+        "component_id": "TAB_BUDGET_ALLOCATOR_SCENARIO_RESULTS",
+        "tab": "budget-allocator",
+        "state": "light-optimize"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=budget-allocator&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_018",
+      "component_id": "TAB_BUDGET_ALLOCATOR_BUDGET_SPLIT",
+      "tab": "budget-allocator",
+      "state": "light-optimize",
+      "state_id": "budget-allocator-light-optimize",
+      "section": "budget-split-chart",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\006-budget-allocator-light-optimize-map.png",
+      "screenshot_public": "screenshots/006-budget-allocator-light-optimize-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 1044,
+        "width": 1358.796875,
+        "height": 478
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 53.102747,
+        "width": 80.880766,
+        "height": 24.313327
+      },
+      "z_index": 24,
+      "order_in_state": 4,
+      "tooltip_summary": {
+        "title": "Budget Split Chart",
+        "business_question": "How does spend share shift between current and optimized allocation?",
+        "kpi_name": "Current vs Optimized Share",
+        "one_line_value": "Use this chart to present high-level reallocation story to stakeholders."
+      },
+      "panel_ref": "TAB_BUDGET_ALLOCATOR_BUDGET_SPLIT",
+      "panel_payload": {
+        "component_id": "TAB_BUDGET_ALLOCATOR_BUDGET_SPLIT",
+        "tab": "budget-allocator",
+        "state": "light-optimize"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=budget-allocator&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_019",
+      "component_id": "TAB_BUDGET_ALLOCATOR_PLANNED_SCENARIO",
+      "tab": "budget-allocator",
+      "state": "light-optimize",
+      "state_id": "budget-allocator-light-optimize",
+      "section": "planned-scenario-panel",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\006-budget-allocator-light-optimize-map.png",
+      "screenshot_public": "screenshots/006-budget-allocator-light-optimize-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 1529,
+        "width": 1358.796875,
+        "height": 278
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 77.772126,
+        "width": 80.880766,
+        "height": 14.140387
+      },
+      "z_index": 25,
+      "order_in_state": 5,
+      "tooltip_summary": {
+        "title": "Planned Scenario Panel",
+        "business_question": "Is this scenario packaged and ready to transfer to simulation/approval?",
+        "kpi_name": "Scenario Packaging",
+        "one_line_value": "Save with explicit objective and date context, then open in Simulator."
+      },
+      "panel_ref": "TAB_BUDGET_ALLOCATOR_PLANNED_SCENARIO",
+      "panel_payload": {
+        "component_id": "TAB_BUDGET_ALLOCATOR_PLANNED_SCENARIO",
+        "tab": "budget-allocator",
+        "state": "light-optimize"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=budget-allocator&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_020",
+      "component_id": "TAB_BUDGET_ALLOCATOR_SCENARIO_BUILDER_WHAT_IF",
+      "tab": "budget-allocator",
+      "state": "light-what-if",
+      "state_id": "budget-allocator-light-what-if",
+      "section": "scenario-builder-what-if",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\007-budget-allocator-light-what-if-map.png",
+      "screenshot_public": "screenshots/007-budget-allocator-light-what-if-map.png",
+      "bbox": {
+        "x": 318.59375,
+        "y": 102,
+        "width": 296,
+        "height": 44
+      },
+      "bbox_pct": {
+        "x": 18.963914,
+        "y": 4.845606,
+        "width": 17.619048,
+        "height": 2.090261
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Scenario Builder (What-If)",
+        "business_question": "What happens if I manually nudge channel spends up or down?",
+        "kpi_name": "What-If Stress Test",
+        "one_line_value": "Stress high-risk channels before approval."
+      },
+      "panel_ref": "TAB_BUDGET_ALLOCATOR_SCENARIO_BUILDER_WHAT_IF",
+      "panel_payload": {
+        "component_id": "TAB_BUDGET_ALLOCATOR_SCENARIO_BUILDER_WHAT_IF",
+        "tab": "budget-allocator",
+        "state": "light-what-if"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=budget-allocator&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_021",
+      "component_id": "TAB_SIMULATOR_HEADER_SAVED_SCENARIOS",
+      "tab": "experiment",
+      "state": "light",
+      "state_id": "experiment-light",
+      "section": "header-and-saved-scenarios",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\008-experiment-light-map.png",
+      "screenshot_public": "screenshots/008-experiment-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 77,
+        "width": 1358.796875,
+        "height": 202
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 2.508961,
+        "width": 80.880766,
+        "height": 6.581949
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Simulator Header & Saved Scenarios",
+        "business_question": "Which scenario baseline am I currently testing?",
+        "kpi_name": "Scenario Context",
+        "one_line_value": "Confirm scenario name/version before interpreting any metric deltas."
+      },
+      "panel_ref": "TAB_SIMULATOR_HEADER_SAVED_SCENARIOS",
+      "panel_payload": {
+        "component_id": "TAB_SIMULATOR_HEADER_SAVED_SCENARIOS",
+        "tab": "experiment",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=experiment&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_022",
+      "component_id": "TAB_SIMULATOR_CHANNEL_MULTIPLIERS",
+      "tab": "experiment",
+      "state": "light",
+      "state_id": "experiment-light",
+      "section": "channel-multipliers-panel",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\008-experiment-light-map.png",
+      "screenshot_public": "screenshots/008-experiment-light-map.png",
+      "bbox": {
+        "x": 301.406,
+        "y": 293.493,
+        "width": 427.533,
+        "height": 2091.038
+      },
+      "bbox_pct": {
+        "x": 17.941,
+        "y": 9.563,
+        "width": 25.448,
+        "height": 68.133
+      },
+      "z_index": 22,
+      "order_in_state": 2,
+      "tooltip_summary": {
+        "title": "Channel Multipliers Panel",
+        "business_question": "How do manual multiplier changes alter expected outcome by channel?",
+        "kpi_name": "Spend Multipliers",
+        "one_line_value": "Test downside and upside bands for top reallocated channels."
+      },
+      "panel_ref": "TAB_SIMULATOR_CHANNEL_MULTIPLIERS",
+      "panel_payload": {
+        "component_id": "TAB_SIMULATOR_CHANNEL_MULTIPLIERS",
+        "tab": "experiment",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=experiment&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_023",
+      "component_id": "TAB_SIMULATOR_OPTIMIZATION_METRICS",
+      "tab": "experiment",
+      "state": "light",
+      "state_id": "experiment-light",
+      "section": "optimization-metrics-table",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\008-experiment-light-map.png",
+      "screenshot_public": "screenshots/008-experiment-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 2405,
+        "width": 1358.796875,
+        "height": 371
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 78.364288,
+        "width": 80.880766,
+        "height": 12.088628
+      },
+      "z_index": 23,
+      "order_in_state": 3,
+      "tooltip_summary": {
+        "title": "Simulator Outcome Metrics",
+        "business_question": "Do manual assumptions preserve value uplift?",
+        "kpi_name": "Simulated Outcome Delta",
+        "one_line_value": "If uplift is material, export and validate via simulator sensitivity checks."
+      },
+      "panel_ref": "TAB_SIMULATOR_OPTIMIZATION_METRICS",
+      "panel_payload": {
+        "component_id": "TAB_SIMULATOR_OPTIMIZATION_METRICS",
+        "tab": "experiment",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=experiment&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_024",
+      "component_id": "TAB_INSIGHTS_HEADLINE_TRUST",
+      "tab": "insights",
+      "state": "light",
+      "state_id": "insights-light",
+      "section": "headline-and-trust-block",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\009-insights-light-map.png",
+      "screenshot_public": "screenshots/009-insights-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 285.5,
+        "width": 1358.796875,
+        "height": 564
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 11.605691,
+        "width": 80.880766,
+        "height": 22.926829
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Insight Headline & Trust",
+        "business_question": "What is the headline recommendation and how much should I trust it?",
+        "kpi_name": "Trust + Executive Summary",
+        "one_line_value": "If trust is weak, review diagnostics and run conservative pilot."
+      },
+      "panel_ref": "TAB_INSIGHTS_HEADLINE_TRUST",
+      "panel_payload": {
+        "component_id": "TAB_INSIGHTS_HEADLINE_TRUST",
+        "tab": "insights",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=insights&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_025",
+      "component_id": "TAB_INSIGHTS_RADAR_CHART",
+      "tab": "insights",
+      "state": "light",
+      "state_id": "insights-light",
+      "section": "radar-chart",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\009-insights-light-map.png",
+      "screenshot_public": "screenshots/009-insights-light-map.png",
+      "bbox": {
+        "x": 293.59375,
+        "y": 1303.5,
+        "width": 670.390625,
+        "height": 410
+      },
+      "bbox_pct": {
+        "x": 17.475818,
+        "y": 52.987805,
+        "width": 39.904204,
+        "height": 16.666667
+      },
+      "z_index": 22,
+      "order_in_state": 2,
+      "tooltip_summary": {
+        "title": "Channel Radar",
+        "business_question": "How do channels compare across multiple dimensions at once?",
+        "kpi_name": "Multi-Dimension Channel Score",
+        "one_line_value": "Use radar to avoid over-optimizing on one metric only."
+      },
+      "panel_ref": "TAB_INSIGHTS_RADAR_CHART",
+      "panel_payload": {
+        "component_id": "TAB_INSIGHTS_RADAR_CHART",
+        "tab": "insights",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=insights&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_026",
+      "component_id": "TAB_INSIGHTS_EFFICIENCY_FRONTIER",
+      "tab": "insights",
+      "state": "light",
+      "state_id": "insights-light",
+      "section": "efficiency-frontier",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\009-insights-light-map.png",
+      "screenshot_public": "screenshots/009-insights-light-map.png",
+      "bbox": {
+        "x": 971.984375,
+        "y": 1303.5,
+        "width": 670.40625,
+        "height": 410
+      },
+      "bbox_pct": {
+        "x": 57.856213,
+        "y": 52.987805,
+        "width": 39.905134,
+        "height": 16.666667
+      },
+      "z_index": 23,
+      "order_in_state": 3,
+      "tooltip_summary": {
+        "title": "Efficiency Frontier",
+        "business_question": "Which channels lie on the efficient spend-vs-return frontier?",
+        "kpi_name": "Spend vs ROI Frontier",
+        "one_line_value": "Target channels below frontier for corrective action."
+      },
+      "panel_ref": "TAB_INSIGHTS_EFFICIENCY_FRONTIER",
+      "panel_payload": {
+        "component_id": "TAB_INSIGHTS_EFFICIENCY_FRONTIER",
+        "tab": "insights",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=insights&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_027",
+      "component_id": "TAB_INSIGHTS_ADSTOCK_BLOCK",
+      "tab": "insights",
+      "state": "light",
+      "state_id": "insights-light",
+      "section": "adstock-block",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\009-insights-light-map.png",
+      "screenshot_public": "screenshots/009-insights-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 1721.5,
+        "width": 1358.796875,
+        "height": 344
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 69.979675,
+        "width": 80.880766,
+        "height": 13.98374
+      },
+      "z_index": 24,
+      "order_in_state": 4,
+      "tooltip_summary": {
+        "title": "Adstock / Carryover",
+        "business_question": "Which channels create delayed impact and how long does it persist?",
+        "kpi_name": "Carryover Dynamics",
+        "one_line_value": "Adjust pacing for channels with long carryover to avoid over-frequency."
+      },
+      "panel_ref": "TAB_INSIGHTS_ADSTOCK_BLOCK",
+      "panel_payload": {
+        "component_id": "TAB_INSIGHTS_ADSTOCK_BLOCK",
+        "tab": "insights",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=insights&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_028",
+      "component_id": "TAB_INSIGHTS_RECOMMENDATIONS_ACTION",
+      "tab": "insights",
+      "state": "light",
+      "state_id": "insights-light",
+      "section": "recommendations-and-suggested-action",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\009-insights-light-map.png",
+      "screenshot_public": "screenshots/009-insights-light-map.png",
+      "bbox": {
+        "x": 293.59375,
+        "y": 2073.5,
+        "width": 670.390625,
+        "height": 266
+      },
+      "bbox_pct": {
+        "x": 17.475818,
+        "y": 84.288618,
+        "width": 39.904204,
+        "height": 10.813008
+      },
+      "z_index": 25,
+      "order_in_state": 5,
+      "tooltip_summary": {
+        "title": "Recommendations",
+        "business_question": "What concrete business action is suggested from current model evidence?",
+        "kpi_name": "Suggested Action",
+        "one_line_value": "Translate recommendation into a scenario and validate in Simulator."
+      },
+      "panel_ref": "TAB_INSIGHTS_RECOMMENDATIONS_ACTION",
+      "panel_payload": {
+        "component_id": "TAB_INSIGHTS_RECOMMENDATIONS_ACTION",
+        "tab": "insights",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=insights&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_029",
+      "component_id": "TAB_INSIGHTS_DIAGNOSTICS",
+      "tab": "insights",
+      "state": "light",
+      "state_id": "insights-light",
+      "section": "diagnostics-block",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\009-insights-light-map.png",
+      "screenshot_public": "screenshots/009-insights-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 2347.5,
+        "width": 1358.796875,
+        "height": 72
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 95.426829,
+        "width": 80.880766,
+        "height": 2.926829
+      },
+      "z_index": 26,
+      "order_in_state": 6,
+      "tooltip_summary": {
+        "title": "Diagnostics",
+        "business_question": "Do diagnostics reveal reasons to limit confidence in the recommendation?",
+        "kpi_name": "Model Diagnostics",
+        "one_line_value": "If red flags appear, run conservative pilot and revisit model."
+      },
+      "panel_ref": "TAB_INSIGHTS_DIAGNOSTICS",
+      "panel_payload": {
+        "component_id": "TAB_INSIGHTS_DIAGNOSTICS",
+        "tab": "insights",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=insights&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_030",
+      "component_id": "TAB_SETTINGS_CONFIGURATION_SELECTION",
+      "tab": "settings",
+      "state": "light",
+      "state_id": "settings-light",
+      "section": "configuration-selection-panel",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\010-settings-light-map.png",
+      "screenshot_public": "screenshots/010-settings-light-map.png",
+      "bbox": {
+        "x": 383.984375,
+        "y": 159,
+        "width": 378.65625,
+        "height": 735
+      },
+      "bbox_pct": {
+        "x": 22.856213,
+        "y": 14.722222,
+        "width": 22.539063,
+        "height": 68.055556
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Configuration Selection",
+        "business_question": "Am I evaluating the correct market/product/version/tier before making decisions?",
+        "kpi_name": "Model Context Selection",
+        "one_line_value": "Lock selection before sharing outputs externally."
+      },
+      "panel_ref": "TAB_SETTINGS_CONFIGURATION_SELECTION",
+      "panel_payload": {
+        "component_id": "TAB_SETTINGS_CONFIGURATION_SELECTION",
+        "tab": "settings",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=settings&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_031",
+      "component_id": "TAB_SETTINGS_ONE_PAGER_METRIC_CARDS",
+      "tab": "settings",
+      "state": "light",
+      "state_id": "settings-light",
+      "section": "one-pager-metric-cards",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\010-settings-light-map.png",
+      "screenshot_public": "screenshots/010-settings-light-map.png",
+      "bbox": {
+        "x": 786.663,
+        "y": 172.69,
+        "width": 757.333,
+        "height": 145.413
+      },
+      "bbox_pct": {
+        "x": 46.825,
+        "y": 15.99,
+        "width": 45.079,
+        "height": 13.464
+      },
+      "z_index": 22,
+      "order_in_state": 2,
+      "tooltip_summary": {
+        "title": "Model Quality One-Pager",
+        "business_question": "Is this model fit for operational use?",
+        "kpi_name": "R\u00b2 / MAPE / Fit Signals",
+        "one_line_value": "If below threshold, prefer conservative changes or alternate version."
+      },
+      "panel_ref": "TAB_SETTINGS_ONE_PAGER_METRIC_CARDS",
+      "panel_payload": {
+        "component_id": "TAB_SETTINGS_ONE_PAGER_METRIC_CARDS",
+        "tab": "settings",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=settings&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_032",
+      "component_id": "TAB_SETTINGS_EFFICIENCY_CHART",
+      "tab": "settings",
+      "state": "light",
+      "state_id": "settings-light",
+      "section": "efficiency-chart",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\010-settings-light-map.png",
+      "screenshot_public": "screenshots/010-settings-light-map.png",
+      "bbox": {
+        "x": 778.640625,
+        "y": 333,
+        "width": 382.671875,
+        "height": 507
+      },
+      "bbox_pct": {
+        "x": 46.347656,
+        "y": 30.833333,
+        "width": 22.778088,
+        "height": 46.944444
+      },
+      "z_index": 23,
+      "order_in_state": 3,
+      "tooltip_summary": {
+        "title": "Efficiency Chart",
+        "business_question": "Which channels over- or under-deliver relative to spend share?",
+        "kpi_name": "Spend Share vs Effect Share",
+        "one_line_value": "Rebalance budget from persistently <1.0 channels toward >1.0 channels with headroom."
+      },
+      "panel_ref": "TAB_SETTINGS_EFFICIENCY_CHART",
+      "panel_payload": {
+        "component_id": "TAB_SETTINGS_EFFICIENCY_CHART",
+        "tab": "settings",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=settings&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_033",
+      "component_id": "TAB_SETTINGS_DRIVER_CONTRIBUTION",
+      "tab": "settings",
+      "state": "light",
+      "state_id": "settings-light",
+      "section": "driver-contribution-chart",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\010-settings-light-map.png",
+      "screenshot_public": "screenshots/010-settings-light-map.png",
+      "bbox": {
+        "x": 1169.3125,
+        "y": 333,
+        "width": 382.671875,
+        "height": 507
+      },
+      "bbox_pct": {
+        "x": 69.601935,
+        "y": 30.833333,
+        "width": 22.778088,
+        "height": 46.944444
+      },
+      "z_index": 24,
+      "order_in_state": 4,
+      "tooltip_summary": {
+        "title": "Driver Contribution",
+        "business_question": "What proportion of outcome is explained by each driver category?",
+        "kpi_name": "Driver Mix",
+        "one_line_value": "Investigate any large driver shift before committing big allocation changes."
+      },
+      "panel_ref": "TAB_SETTINGS_DRIVER_CONTRIBUTION",
+      "panel_payload": {
+        "component_id": "TAB_SETTINGS_DRIVER_CONTRIBUTION",
+        "tab": "settings",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=settings&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_034",
+      "component_id": "TAB_GEOGRAPHY_ADVANCED_MAP",
+      "tab": "geography",
+      "state": "light-advanced",
+      "state_id": "geography-light-advanced",
+      "section": "advanced-map-view",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\011-geography-light-advanced-map.png",
+      "screenshot_public": "screenshots/011-geography-light-advanced-map.png",
+      "bbox": {
+        "x": 383.984375,
+        "y": 277,
+        "width": 482,
+        "height": 652
+      },
+      "bbox_pct": {
+        "x": 22.856,
+        "y": 9.658,
+        "width": 28.69,
+        "height": 22.73
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Territory Map",
+        "business_question": "Which territories show strongest or weakest modeled effects?",
+        "kpi_name": "Territory Effect Intensity",
+        "one_line_value": "Use map outliers to prioritize deeper territory review."
+      },
+      "panel_ref": "TAB_GEOGRAPHY_ADVANCED_MAP",
+      "panel_payload": {
+        "component_id": "TAB_GEOGRAPHY_ADVANCED_MAP",
+        "tab": "geography",
+        "state": "light-advanced"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=geography&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_035",
+      "component_id": "TAB_GEOGRAPHY_TERRITORY_TABLE",
+      "tab": "geography",
+      "state": "light-advanced",
+      "state_id": "geography-light-advanced",
+      "section": "territory-detail-table",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\011-geography-light-advanced-map.png",
+      "screenshot_public": "screenshots/011-geography-light-advanced-map.png",
+      "bbox": {
+        "x": 382.712,
+        "y": 945.313,
+        "width": 1151.998,
+        "height": 597.757
+      },
+      "bbox_pct": {
+        "x": 22.78,
+        "y": 32.961,
+        "width": 68.571,
+        "height": 20.843
+      },
+      "z_index": 22,
+      "order_in_state": 2,
+      "tooltip_summary": {
+        "title": "Territory Detail Table",
+        "business_question": "How do territories compare on channel-specific effect metrics?",
+        "kpi_name": "Territory Channel Detail",
+        "one_line_value": "Build regional action list from top/bottom territory clusters."
+      },
+      "panel_ref": "TAB_GEOGRAPHY_TERRITORY_TABLE",
+      "panel_payload": {
+        "component_id": "TAB_GEOGRAPHY_TERRITORY_TABLE",
+        "tab": "geography",
+        "state": "light-advanced"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=geography&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_036",
+      "component_id": "TAB_GEOGRAPHY_CHANNEL_DISPERSION",
+      "tab": "geography",
+      "state": "light-advanced",
+      "state_id": "geography-light-advanced",
+      "section": "channel-dispersion-cards",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\011-geography-light-advanced-map.png",
+      "screenshot_public": "screenshots/011-geography-light-advanced-map.png",
+      "bbox": {
+        "x": 379.984375,
+        "y": 1574,
+        "width": 1176,
+        "height": 352
+      },
+      "bbox_pct": {
+        "x": 22.618118,
+        "y": 54.88145,
+        "width": 70,
+        "height": 12.273361
+      },
+      "z_index": 23,
+      "order_in_state": 3,
+      "tooltip_summary": {
+        "title": "Channel Dispersion",
+        "business_question": "How uneven is channel effect across territories?",
+        "kpi_name": "Dispersion / Variance",
+        "one_line_value": "High-dispersion channels should get region-specific planning."
+      },
+      "panel_ref": "TAB_GEOGRAPHY_CHANNEL_DISPERSION",
+      "panel_payload": {
+        "component_id": "TAB_GEOGRAPHY_CHANNEL_DISPERSION",
+        "tab": "geography",
+        "state": "light-advanced"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=geography&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_037",
+      "component_id": "TAB_GEOGRAPHY_BASIC_LOCKED",
+      "tab": "geography",
+      "state": "light-basic",
+      "state_id": "geography-light-basic",
+      "section": "basic-tier-locked-placeholder",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\012-geography-light-basic-map.png",
+      "screenshot_public": "screenshots/012-geography-light-basic-map.png",
+      "bbox": {
+        "x": 575.984375,
+        "y": 165,
+        "width": 784,
+        "height": 390
+      },
+      "bbox_pct": {
+        "x": 34.284784,
+        "y": 15.277778,
+        "width": 46.666667,
+        "height": 36.111111
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Advanced Tier Lock",
+        "business_question": "Why is territory analysis unavailable and what unlocks it?",
+        "kpi_name": "Tier Gate",
+        "one_line_value": "Go to Settings and switch to Advanced tier when available."
+      },
+      "panel_ref": "TAB_GEOGRAPHY_BASIC_LOCKED",
+      "panel_payload": {
+        "component_id": "TAB_GEOGRAPHY_BASIC_LOCKED",
+        "tab": "geography",
+        "state": "light-basic"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=geography&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_038",
+      "component_id": "TAB_HOME_DARK_OVERVIEW",
+      "tab": "home",
+      "state": "dark",
+      "state_id": "home-dark",
+      "section": "tab-overview",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\013-home-dark-map.png",
+      "screenshot_public": "screenshots/013-home-dark-map.png",
+      "bbox": {
+        "x": 293.59375,
+        "y": 77,
+        "width": 276.5625,
+        "height": 48
+      },
+      "bbox_pct": {
+        "x": 17.475818,
+        "y": 3.834661,
+        "width": 16.462054,
+        "height": 2.390438
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Tab Orientation",
+        "business_question": "What is this tab for, and which decision should I make here?",
+        "kpi_name": "Navigation Context",
+        "one_line_value": "Verify selected context, then use the main KPI/graph below for decisioning."
+      },
+      "panel_ref": "TAB_HOME_DARK_OVERVIEW",
+      "panel_payload": {
+        "component_id": "TAB_HOME_DARK_OVERVIEW",
+        "tab": "home",
+        "state": "dark"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=home&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_039",
+      "component_id": "TAB_SALES_IMPACT_DARK_OVERVIEW",
+      "tab": "sales-impact",
+      "state": "dark",
+      "state_id": "sales-impact-dark",
+      "section": "tab-overview",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\014-sales-impact-dark-map.png",
+      "screenshot_public": "screenshots/014-sales-impact-dark-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 216,
+        "width": 1358.796875,
+        "height": 572
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 13.863928,
+        "width": 80.880766,
+        "height": 36.713736
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Tab Orientation",
+        "business_question": "What is this tab for, and which decision should I make here?",
+        "kpi_name": "Navigation Context",
+        "one_line_value": "Verify selected context, then use the main KPI/graph below for decisioning."
+      },
+      "panel_ref": "TAB_SALES_IMPACT_DARK_OVERVIEW",
+      "panel_payload": {
+        "component_id": "TAB_SALES_IMPACT_DARK_OVERVIEW",
+        "tab": "sales-impact",
+        "state": "dark"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=sales-impact&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_040",
+      "component_id": "TAB_RESPONSE_CURVES_DARK_OVERVIEW",
+      "tab": "response-curves",
+      "state": "dark",
+      "state_id": "response-curves-dark",
+      "section": "tab-overview",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\015-response-curves-dark-map.png",
+      "screenshot_public": "screenshots/015-response-curves-dark-map.png",
+      "bbox": {
+        "x": 4,
+        "y": 203,
+        "width": 247,
+        "height": 56
+      },
+      "bbox_pct": {
+        "x": 0.238095,
+        "y": 15.217391,
+        "width": 14.702381,
+        "height": 4.197901
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Tab Orientation",
+        "business_question": "What is this tab for, and which decision should I make here?",
+        "kpi_name": "Navigation Context",
+        "one_line_value": "Verify selected context, then use the main KPI/graph below for decisioning."
+      },
+      "panel_ref": "TAB_RESPONSE_CURVES_DARK_OVERVIEW",
+      "panel_payload": {
+        "component_id": "TAB_RESPONSE_CURVES_DARK_OVERVIEW",
+        "tab": "response-curves",
+        "state": "dark"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=response-curves&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_041",
+      "component_id": "TAB_BUDGET_ALLOCATOR_DARK_OVERVIEW",
+      "tab": "budget-allocator",
+      "state": "dark",
+      "state_id": "budget-allocator-dark",
+      "section": "tab-overview",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\016-budget-allocator-dark-map.png",
+      "screenshot_public": "screenshots/016-budget-allocator-dark-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 75,
+        "width": 1358.796875,
+        "height": 506
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 3.814852,
+        "width": 80.880766,
+        "height": 25.737538
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Tab Orientation",
+        "business_question": "What is this tab for, and which decision should I make here?",
+        "kpi_name": "Navigation Context",
+        "one_line_value": "Verify selected context, then use the main KPI/graph below for decisioning."
+      },
+      "panel_ref": "TAB_BUDGET_ALLOCATOR_DARK_OVERVIEW",
+      "panel_payload": {
+        "component_id": "TAB_BUDGET_ALLOCATOR_DARK_OVERVIEW",
+        "tab": "budget-allocator",
+        "state": "dark"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=budget-allocator&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_042",
+      "component_id": "TAB_SIMULATOR_DARK_OVERVIEW",
+      "tab": "experiment",
+      "state": "dark",
+      "state_id": "experiment-dark",
+      "section": "tab-overview",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\017-experiment-dark-map.png",
+      "screenshot_public": "screenshots/017-experiment-dark-map.png",
+      "bbox": {
+        "x": 318.59375,
+        "y": 312,
+        "width": 220.640625,
+        "height": 44
+      },
+      "bbox_pct": {
+        "x": 18.963914,
+        "y": 10.166178,
+        "width": 13.133371,
+        "height": 1.433692
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Tab Orientation",
+        "business_question": "What is this tab for, and which decision should I make here?",
+        "kpi_name": "Navigation Context",
+        "one_line_value": "Verify selected context, then use the main KPI/graph below for decisioning."
+      },
+      "panel_ref": "TAB_SIMULATOR_DARK_OVERVIEW",
+      "panel_payload": {
+        "component_id": "TAB_SIMULATOR_DARK_OVERVIEW",
+        "tab": "experiment",
+        "state": "dark"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=experiment&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_043",
+      "component_id": "TAB_INSIGHTS_DARK_OVERVIEW",
+      "tab": "insights",
+      "state": "dark",
+      "state_id": "insights-dark",
+      "section": "tab-overview",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\018-insights-dark-map.png",
+      "screenshot_public": "screenshots/018-insights-dark-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 285.5,
+        "width": 1358.796875,
+        "height": 564
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 11.605691,
+        "width": 80.880766,
+        "height": 22.926829
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Tab Orientation",
+        "business_question": "What is this tab for, and which decision should I make here?",
+        "kpi_name": "Navigation Context",
+        "one_line_value": "Verify selected context, then use the main KPI/graph below for decisioning."
+      },
+      "panel_ref": "TAB_INSIGHTS_DARK_OVERVIEW",
+      "panel_payload": {
+        "component_id": "TAB_INSIGHTS_DARK_OVERVIEW",
+        "tab": "insights",
+        "state": "dark"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=insights&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_044",
+      "component_id": "TAB_SETTINGS_DARK_OVERVIEW",
+      "tab": "settings",
+      "state": "dark",
+      "state_id": "settings-dark",
+      "section": "tab-overview",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\019-settings-dark-map.png",
+      "screenshot_public": "screenshots/019-settings-dark-map.png",
+      "bbox": {
+        "x": 383.984375,
+        "y": 77,
+        "width": 516.78125,
+        "height": 48
+      },
+      "bbox_pct": {
+        "x": 22.856213,
+        "y": 7.12963,
+        "width": 30.760789,
+        "height": 4.444444
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Tab Orientation",
+        "business_question": "What is this tab for, and which decision should I make here?",
+        "kpi_name": "Navigation Context",
+        "one_line_value": "Verify selected context, then use the main KPI/graph below for decisioning."
+      },
+      "panel_ref": "TAB_SETTINGS_DARK_OVERVIEW",
+      "panel_payload": {
+        "component_id": "TAB_SETTINGS_DARK_OVERVIEW",
+        "tab": "settings",
+        "state": "dark"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=settings&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_045",
+      "component_id": "TAB_GEOGRAPHY_DARK_OVERVIEW",
+      "tab": "geography",
+      "state": "dark",
+      "state_id": "geography-dark",
+      "section": "tab-overview",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\020-geography-dark-map.png",
+      "screenshot_public": "screenshots/020-geography-dark-map.png",
+      "bbox": {
+        "x": 408.984375,
+        "y": 1033,
+        "width": 257.421875,
+        "height": 56.5
+      },
+      "bbox_pct": {
+        "x": 24.344308,
+        "y": 36.018131,
+        "width": 15.322731,
+        "height": 1.970014
+      },
+      "z_index": 21,
+      "order_in_state": 1,
+      "tooltip_summary": {
+        "title": "Tab Orientation",
+        "business_question": "What is this tab for, and which decision should I make here?",
+        "kpi_name": "Navigation Context",
+        "one_line_value": "Verify selected context, then use the main KPI/graph below for decisioning."
+      },
+      "panel_ref": "TAB_GEOGRAPHY_DARK_OVERVIEW",
+      "panel_payload": {
+        "component_id": "TAB_GEOGRAPHY_DARK_OVERVIEW",
+        "tab": "geography",
+        "state": "dark"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=geography&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    },
+    {
+      "hotspot_id": "HS_046",
+      "component_id": "TAB_HOME_CONTEXT_SELECTORS",
+      "tab": "home",
+      "state": "light",
+      "state_id": "home-light",
+      "section": "context-selectors",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\001-home-light-map.png",
+      "screenshot_public": "screenshots/001-home-light-map.png",
+      "bbox": {
+        "x": 1042,
+        "y": 8,
+        "width": 540,
+        "height": 52
+      },
+      "bbox_pct": {
+        "x": 62.024,
+        "y": 0.409,
+        "width": 32.143,
+        "height": 2.661
+      },
+      "z_index": 27,
+      "order_in_state": 7,
+      "tooltip_summary": {
+        "title": "Dashboard Context Selectors",
+        "business_question": "Am I looking at the right country, product, and time period?",
+        "kpi_name": "Scope Controls",
+        "one_line_value": "Verify country/product/year before interpreting any dashboard data. Use theme toggle for presentation preferences."
+      },
+      "panel_ref": "TAB_HOME_CONTEXT_SELECTORS",
+      "panel_payload": {
+        "component_id": "TAB_HOME_CONTEXT_SELECTORS",
+        "tab": "home",
+        "state": "light"
+      },
+      "live_dashboard_url": "http://127.0.0.1:3000/?tab=home&country=France&product=france_mavenclad_snowflake&year=2023&version=latest"
+    }
+  ]
+}

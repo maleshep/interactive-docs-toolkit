@@ -1,0 +1,2011 @@
+{
+  "generated_at": "2026-03-13T13:02:38.532Z",
+  "canonical_context": {
+    "country": "France",
+    "product": "france_mavenclad_snowflake",
+    "year": 2023,
+    "version": "latest",
+    "data_source": "snowflake"
+  },
+  "capture_spec": {
+    "source": "C:/Users/M316235/repo/temp/interactive-docs-toolkit/spec/capture_spec_mmx.json",
+    "path": "C:/Users/M316235/repo/temp/interactive-docs-toolkit/spec/capture_spec_mmx.json",
+    "using_default_spec": false,
+    "state_count": 20
+  },
+  "screenshot_count": 20,
+  "component_count": 45,
+  "omitted_component_count": 0,
+  "states": [
+    {
+      "state_id": "home-light",
+      "tab": "home",
+      "state": "light",
+      "nav_label": "Home",
+      "expected_text": "Dashboard Overview",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\001-home-light-map.png",
+      "full_width": 1680,
+      "full_height": 1954,
+      "hotspot_ids": [
+        "HS_001",
+        "HS_002",
+        "HS_003",
+        "HS_004",
+        "HS_005",
+        "HS_006",
+        "HS_046"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "sales-impact-light",
+      "tab": "sales-impact",
+      "state": "light",
+      "nav_label": "Sales Impact",
+      "expected_text": "Annual Volume Impact",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\002-sales-impact-light-map.png",
+      "full_width": 1680,
+      "full_height": 1558,
+      "hotspot_ids": [
+        "HS_007",
+        "HS_008",
+        "HS_009",
+        "HS_010"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "response-curves-light-revenue",
+      "tab": "response-curves",
+      "state": "light-revenue",
+      "nav_label": "Response Curves",
+      "expected_text": "Response Curves",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\003-response-curves-light-revenue-map.png",
+      "full_width": 1680,
+      "full_height": 1296,
+      "hotspot_ids": [
+        "HS_011",
+        "HS_012"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "response-curves-light-mroi",
+      "tab": "response-curves",
+      "state": "light-mroi",
+      "nav_label": "Response Curves",
+      "expected_text": "Response Curves",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\004-response-curves-light-mroi-map.png",
+      "full_width": 1680,
+      "full_height": 1296,
+      "hotspot_ids": [
+        "HS_013"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "response-curves-light-saturation",
+      "tab": "response-curves",
+      "state": "light-saturation",
+      "nav_label": "Response Curves",
+      "expected_text": "Response Curves",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\005-response-curves-light-saturation-map.png",
+      "full_width": 1680,
+      "full_height": 1296,
+      "hotspot_ids": [
+        "HS_014"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "budget-allocator-light-optimize",
+      "tab": "budget-allocator",
+      "state": "light-optimize",
+      "nav_label": "Budget Allocator",
+      "expected_text": "Scenario Builder",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\006-budget-allocator-light-optimize-map.png",
+      "full_width": 1680,
+      "full_height": 1966,
+      "hotspot_ids": [
+        "HS_015",
+        "HS_016",
+        "HS_017",
+        "HS_018",
+        "HS_019"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "budget-allocator-light-what-if",
+      "tab": "budget-allocator",
+      "state": "light-what-if",
+      "nav_label": "Budget Allocator",
+      "expected_text": "Scenario Builder",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\007-budget-allocator-light-what-if-map.png",
+      "full_width": 1680,
+      "full_height": 2105,
+      "hotspot_ids": [
+        "HS_020"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "experiment-light",
+      "tab": "experiment",
+      "state": "light",
+      "nav_label": "Simulator",
+      "expected_text": "Channel Multipliers",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\008-experiment-light-map.png",
+      "full_width": 1680,
+      "full_height": 3069,
+      "hotspot_ids": [
+        "HS_021",
+        "HS_022",
+        "HS_023"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "insights-light",
+      "tab": "insights",
+      "state": "light",
+      "nav_label": "Insights",
+      "expected_text": "Channel Performance",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\009-insights-light-map.png",
+      "full_width": 1680,
+      "full_height": 2460,
+      "hotspot_ids": [
+        "HS_024",
+        "HS_025",
+        "HS_026",
+        "HS_027",
+        "HS_028",
+        "HS_029"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "geography-light-advanced",
+      "tab": "geography",
+      "state": "light-advanced",
+      "nav_label": "Geography",
+      "expected_text": "Territory",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\011-geography-light-advanced-map.png",
+      "full_width": 1680,
+      "full_height": 2868,
+      "hotspot_ids": [
+        "HS_034",
+        "HS_035",
+        "HS_036"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "geography-light-basic",
+      "tab": "geography",
+      "state": "light-basic",
+      "nav_label": "Geography",
+      "expected_text": "Advanced Tier Required",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\012-geography-light-basic-map.png",
+      "full_width": 1680,
+      "full_height": 1080,
+      "hotspot_ids": [
+        "HS_037"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "settings-light",
+      "tab": "settings",
+      "state": "light",
+      "nav_label": "System Flow & Settings",
+      "expected_text": "System Settings",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\010-settings-light-map.png",
+      "full_width": 1680,
+      "full_height": 1080,
+      "hotspot_ids": [
+        "HS_030",
+        "HS_031",
+        "HS_032",
+        "HS_033"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "home-dark",
+      "tab": "home",
+      "state": "dark",
+      "nav_label": "Home",
+      "expected_text": "Dashboard Overview",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\013-home-dark-map.png",
+      "full_width": 1680,
+      "full_height": 2008,
+      "hotspot_ids": [
+        "HS_038"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "sales-impact-dark",
+      "tab": "sales-impact",
+      "state": "dark",
+      "nav_label": "Sales Impact",
+      "expected_text": "Annual Volume Impact",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\014-sales-impact-dark-map.png",
+      "full_width": 1680,
+      "full_height": 1558,
+      "hotspot_ids": [
+        "HS_039"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "response-curves-dark",
+      "tab": "response-curves",
+      "state": "dark",
+      "nav_label": "Response Curves",
+      "expected_text": "Response Curves",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\015-response-curves-dark-map.png",
+      "full_width": 1680,
+      "full_height": 1334,
+      "hotspot_ids": [
+        "HS_040"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "budget-allocator-dark",
+      "tab": "budget-allocator",
+      "state": "dark",
+      "nav_label": "Budget Allocator",
+      "expected_text": "Scenario Builder",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\016-budget-allocator-dark-map.png",
+      "full_width": 1680,
+      "full_height": 1966,
+      "hotspot_ids": [
+        "HS_041"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "experiment-dark",
+      "tab": "experiment",
+      "state": "dark",
+      "nav_label": "Simulator",
+      "expected_text": "Channel Multipliers",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\017-experiment-dark-map.png",
+      "full_width": 1680,
+      "full_height": 3069,
+      "hotspot_ids": [
+        "HS_042"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "insights-dark",
+      "tab": "insights",
+      "state": "dark",
+      "nav_label": "Insights",
+      "expected_text": "Channel Performance",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\018-insights-dark-map.png",
+      "full_width": 1680,
+      "full_height": 2460,
+      "hotspot_ids": [
+        "HS_043"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "geography-dark",
+      "tab": "geography",
+      "state": "dark",
+      "nav_label": "Geography",
+      "expected_text": "Territory",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\020-geography-dark-map.png",
+      "full_width": 1680,
+      "full_height": 2868,
+      "hotspot_ids": [
+        "HS_045"
+      ],
+      "omitted_components": []
+    },
+    {
+      "state_id": "settings-dark",
+      "tab": "settings",
+      "state": "dark",
+      "nav_label": "System Flow & Settings",
+      "expected_text": "System Settings",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\019-settings-dark-map.png",
+      "full_width": 1680,
+      "full_height": 1080,
+      "hotspot_ids": [
+        "HS_044"
+      ],
+      "omitted_components": []
+    }
+  ],
+  "captures": [
+    {
+      "hotspot_id": "HS_001",
+      "state_id": "home-light",
+      "component_id": "TAB_HOME_OVERVIEW_SHELL",
+      "tab": "home",
+      "state": "light",
+      "section": "tab-overview",
+      "anchor_text": "Dashboard Overview",
+      "matched_text": "Dashboard Overview",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\001-home-light-map.png",
+      "bbox": {
+        "x": 293.59375,
+        "y": 77,
+        "width": 276.5625,
+        "height": 48
+      },
+      "bbox_pct": {
+        "x": 17.475818,
+        "y": 3.940635,
+        "width": 16.462054,
+        "height": 2.456499
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/home/HomeTab.tsx",
+      "ui_role": "Home analytics section",
+      "business_meaning": "Summarizes top-line performance and routes users into the optimization workflow.",
+      "interactions": "Buttons navigate to downstream tabs and scenarios open Simulator context.",
+      "api_endpoints": [
+        "/api/contributions",
+        "/api/budget",
+        "/api/scenarios",
+        "/api/channel-mix",
+        "/api/products-summary"
+      ],
+      "upstream_artifacts": [
+        "pareto_alldecomp_matrix.csv",
+        "raw_data.csv",
+        "model_stats.json",
+        "pymc_uncertainty.json"
+      ],
+      "fallback_behavior": "Shows spinner then no-data placeholders when upstream rows are missing."
+    },
+    {
+      "hotspot_id": "HS_002",
+      "state_id": "home-light",
+      "component_id": "TAB_HOME_KPI_ROW",
+      "tab": "home",
+      "state": "light",
+      "section": "kpi-row",
+      "anchor_text": "Total Spend",
+      "matched_text": "Total Spend\n\n\u00e2\u201a\u00ac1.12M",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\001-home-light-map.png",
+      "bbox": {
+        "x": 301.406,
+        "y": 164.688,
+        "width": 1314.609,
+        "height": 113.426
+      },
+      "bbox_pct": {
+        "x": 17.941,
+        "y": 8.428,
+        "width": 78.251,
+        "height": 5.806
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/home/HomeTab.tsx",
+      "ui_role": "Home analytics section",
+      "business_meaning": "Summarizes top-line performance and routes users into the optimization workflow.",
+      "interactions": "Buttons navigate to downstream tabs and scenarios open Simulator context.",
+      "api_endpoints": [
+        "/api/contributions",
+        "/api/budget",
+        "/api/scenarios",
+        "/api/channel-mix",
+        "/api/products-summary"
+      ],
+      "upstream_artifacts": [
+        "pareto_alldecomp_matrix.csv",
+        "raw_data.csv",
+        "model_stats.json",
+        "pymc_uncertainty.json"
+      ],
+      "fallback_behavior": "Shows spinner then no-data placeholders when upstream rows are missing."
+    },
+    {
+      "hotspot_id": "HS_003",
+      "state_id": "home-light",
+      "component_id": "TAB_HOME_ACTIONS_SCENARIOS",
+      "tab": "home",
+      "state": "light",
+      "section": "quick-actions-and-scenarios",
+      "anchor_text": "Quick Actions",
+      "matched_text": "Quick Actions\nView Sales Impact\nExplore Response Curves\nOptimize Budget\nRun Experiment\nRecent Scenarios",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\001-home-light-map.png",
+      "bbox": {
+        "x": 293.594,
+        "y": 295,
+        "width": 1322.422,
+        "height": 310
+      },
+      "bbox_pct": {
+        "x": 17.476,
+        "y": 15.097,
+        "width": 78.716,
+        "height": 15.865
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/home/HomeTab.tsx",
+      "ui_role": "Home analytics section",
+      "business_meaning": "Summarizes top-line performance and routes users into the optimization workflow.",
+      "interactions": "Buttons navigate to downstream tabs and scenarios open Simulator context.",
+      "api_endpoints": [
+        "/api/contributions",
+        "/api/budget",
+        "/api/scenarios",
+        "/api/channel-mix",
+        "/api/products-summary"
+      ],
+      "upstream_artifacts": [
+        "pareto_alldecomp_matrix.csv",
+        "raw_data.csv",
+        "model_stats.json",
+        "pymc_uncertainty.json"
+      ],
+      "fallback_behavior": "Shows spinner then no-data placeholders when upstream rows are missing."
+    },
+    {
+      "hotspot_id": "HS_004",
+      "state_id": "home-light",
+      "component_id": "TAB_HOME_MONTHLY_TREND",
+      "tab": "home",
+      "state": "light",
+      "section": "monthly-trend",
+      "anchor_text": "Monthly Incremental Sales Trend",
+      "matched_text": "Monthly Incremental Sales Trend",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\001-home-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 613,
+        "width": 1358.796875,
+        "height": 306
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 31.371546,
+        "width": 80.880766,
+        "height": 15.660184
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/home/HomeTab.tsx",
+      "ui_role": "Home analytics section",
+      "business_meaning": "Summarizes top-line performance and routes users into the optimization workflow.",
+      "interactions": "Buttons navigate to downstream tabs and scenarios open Simulator context.",
+      "api_endpoints": [
+        "/api/contributions",
+        "/api/budget",
+        "/api/scenarios",
+        "/api/channel-mix",
+        "/api/products-summary"
+      ],
+      "upstream_artifacts": [
+        "pareto_alldecomp_matrix.csv",
+        "raw_data.csv",
+        "model_stats.json",
+        "pymc_uncertainty.json"
+      ],
+      "fallback_behavior": "Shows spinner then no-data placeholders when upstream rows are missing."
+    },
+    {
+      "hotspot_id": "HS_005",
+      "state_id": "home-light",
+      "component_id": "TAB_HOME_CHANNEL_MIX",
+      "tab": "home",
+      "state": "light",
+      "section": "channel-mix",
+      "anchor_text": "Channel Contribution Mix",
+      "matched_text": "Channel Contribution Mix\n\n4\n\nchannels\n\nHCP Detail Calls (All Channels)\n\u00e2\u201a\u00ac9.8M\n63.8%\nTotal Event Spend\n\u00e2\u201a\u00ac3.4M\n22.4%\nTotal Emails Sent\n\u00e2\u201a\u00ac1.2M\n7.7%\nEmail Opens\n\u00e2\u201a\u00ac948K\n",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\001-home-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 927,
+        "width": 1358.796875,
+        "height": 390
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 47.441146,
+        "width": 80.880766,
+        "height": 19.959058
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/home/HomeTab.tsx",
+      "ui_role": "Home analytics section",
+      "business_meaning": "Summarizes top-line performance and routes users into the optimization workflow.",
+      "interactions": "Buttons navigate to downstream tabs and scenarios open Simulator context.",
+      "api_endpoints": [
+        "/api/contributions",
+        "/api/budget",
+        "/api/scenarios",
+        "/api/channel-mix",
+        "/api/products-summary"
+      ],
+      "upstream_artifacts": [
+        "pareto_alldecomp_matrix.csv",
+        "raw_data.csv",
+        "model_stats.json",
+        "pymc_uncertainty.json"
+      ],
+      "fallback_behavior": "Shows spinner then no-data placeholders when upstream rows are missing."
+    },
+    {
+      "hotspot_id": "HS_006",
+      "state_id": "home-light",
+      "component_id": "TAB_HOME_CROSS_PRODUCT_ROAS",
+      "tab": "home",
+      "state": "light",
+      "section": "cross-product-roas",
+      "anchor_text": "Portfolio ROAS Comparison",
+      "matched_text": "Portfolio ROAS Comparison",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\001-home-light-map.png",
+      "bbox": {
+        "x": 301.406,
+        "y": 1330.335,
+        "width": 1314.609,
+        "height": 563.817
+      },
+      "bbox_pct": {
+        "x": 17.941,
+        "y": 68.083,
+        "width": 78.251,
+        "height": 28.854
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/home/HomeTab.tsx",
+      "ui_role": "Home analytics section",
+      "business_meaning": "Summarizes top-line performance and routes users into the optimization workflow.",
+      "interactions": "Buttons navigate to downstream tabs and scenarios open Simulator context.",
+      "api_endpoints": [
+        "/api/contributions",
+        "/api/budget",
+        "/api/scenarios",
+        "/api/channel-mix",
+        "/api/products-summary"
+      ],
+      "upstream_artifacts": [
+        "pareto_alldecomp_matrix.csv",
+        "raw_data.csv",
+        "model_stats.json",
+        "pymc_uncertainty.json"
+      ],
+      "fallback_behavior": "Shows spinner then no-data placeholders when upstream rows are missing."
+    },
+    {
+      "hotspot_id": "HS_007",
+      "state_id": "sales-impact-light",
+      "component_id": "TAB_SALES_IMPACT_KPI_ROW",
+      "tab": "sales-impact",
+      "state": "light",
+      "section": "kpi-row",
+      "anchor_text": "Model R\u00c2\u00b2",
+      "matched_text": "Model R\u00c2\u00b2\n0.92\nModel Quality",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\002-sales-impact-light-map.png",
+      "bbox": {
+        "x": 301.406,
+        "y": 84.688,
+        "width": 1314.609,
+        "height": 117.422
+      },
+      "bbox_pct": {
+        "x": 17.941,
+        "y": 5.436,
+        "width": 78.251,
+        "height": 7.536
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/sales-impact/SalesImpactTab.tsx",
+      "ui_role": "Sales impact module",
+      "business_meaning": "Explains model quality and incremental channel contributions by period.",
+      "interactions": "Export/copy controls support audit handoff and offline checks.",
+      "api_endpoints": [
+        "/api/contributions",
+        "/api/model-stats"
+      ],
+      "upstream_artifacts": [
+        "pareto_alldecomp_matrix.csv",
+        "raw_data.csv",
+        "model_stats.json"
+      ],
+      "fallback_behavior": "Charts/tables become empty when contribution rows are unavailable."
+    },
+    {
+      "hotspot_id": "HS_008",
+      "state_id": "sales-impact-light",
+      "component_id": "TAB_SALES_IMPACT_ANNUAL_CHART",
+      "tab": "sales-impact",
+      "state": "light",
+      "section": "annual-volume-impact",
+      "anchor_text": "Annual Volume Impact",
+      "matched_text": "Annual Volume Impact\n\nStacked monthly incremental volume by channel (percentage view)\n\nEmail OpensHCP Detail Calls (All Channels)Total Emails SentTotal Event Sp",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\002-sales-impact-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 216,
+        "width": 1358.796875,
+        "height": 572
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 13.863928,
+        "width": 80.880766,
+        "height": 36.713736
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/sales-impact/SalesImpactTab.tsx",
+      "ui_role": "Sales impact module",
+      "business_meaning": "Explains model quality and incremental channel contributions by period.",
+      "interactions": "Export/copy controls support audit handoff and offline checks.",
+      "api_endpoints": [
+        "/api/contributions",
+        "/api/model-stats"
+      ],
+      "upstream_artifacts": [
+        "pareto_alldecomp_matrix.csv",
+        "raw_data.csv",
+        "model_stats.json"
+      ],
+      "fallback_behavior": "Charts/tables become empty when contribution rows are unavailable."
+    },
+    {
+      "hotspot_id": "HS_009",
+      "state_id": "sales-impact-light",
+      "component_id": "TAB_SALES_IMPACT_CHANNEL_CONTRIBUTIONS",
+      "tab": "sales-impact",
+      "state": "light",
+      "section": "channel-contributions",
+      "anchor_text": "Channel Contributions",
+      "matched_text": "Channel Contributions\n\nAbsolute monthly contributions\n\nEmail OpensHCP Detail Calls (All Channels)Total Emails SentTotal Event Spend\n2023-1\n2023-10\n2023-11\n2023-",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\002-sales-impact-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 790,
+        "width": 1358.796875,
+        "height": 552
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 50.706033,
+        "width": 80.880766,
+        "height": 35.430039
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/sales-impact/SalesImpactTab.tsx",
+      "ui_role": "Sales impact module",
+      "business_meaning": "Explains model quality and incremental channel contributions by period.",
+      "interactions": "Export/copy controls support audit handoff and offline checks.",
+      "api_endpoints": [
+        "/api/contributions",
+        "/api/model-stats"
+      ],
+      "upstream_artifacts": [
+        "pareto_alldecomp_matrix.csv",
+        "raw_data.csv",
+        "model_stats.json"
+      ],
+      "fallback_behavior": "Charts/tables become empty when contribution rows are unavailable."
+    },
+    {
+      "hotspot_id": "HS_010",
+      "state_id": "sales-impact-light",
+      "component_id": "TAB_SALES_IMPACT_NEXT_STEP_PROMPT",
+      "tab": "sales-impact",
+      "state": "light",
+      "section": "next-step-prompt",
+      "anchor_text": "Ready for the next step?",
+      "matched_text": "Ready for the next step?\nSee how each channel's spend translates to impact\nExplore Response Curves",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\002-sales-impact-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 1432,
+        "width": 1358.796875,
+        "height": 86
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 91.912709,
+        "width": 80.880766,
+        "height": 5.519897
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/sales-impact/SalesImpactTab.tsx",
+      "ui_role": "Sales impact module",
+      "business_meaning": "Explains model quality and incremental channel contributions by period.",
+      "interactions": "Export/copy controls support audit handoff and offline checks.",
+      "api_endpoints": [
+        "/api/contributions",
+        "/api/model-stats"
+      ],
+      "upstream_artifacts": [
+        "pareto_alldecomp_matrix.csv",
+        "raw_data.csv",
+        "model_stats.json"
+      ],
+      "fallback_behavior": "Charts/tables become empty when contribution rows are unavailable."
+    },
+    {
+      "hotspot_id": "HS_011",
+      "state_id": "response-curves-light-revenue",
+      "component_id": "TAB_RESPONSE_CURVES_MAIN_CHART_REVENUE",
+      "tab": "response-curves",
+      "state": "light-revenue",
+      "section": "main-curve-chart",
+      "anchor_text": "Response Curves",
+      "matched_text": "Response Curves",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\003-response-curves-light-revenue-map.png",
+      "bbox": {
+        "x": 301.406,
+        "y": 322.411,
+        "width": 1314.609,
+        "height": 644.821
+      },
+      "bbox_pct": {
+        "x": 17.941,
+        "y": 24.877,
+        "width": 78.251,
+        "height": 49.755
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/response-curves/ResponseCurvesTab.tsx",
+      "ui_role": "Response curve analytics module",
+      "business_meaning": "Shows diminishing returns and marginal efficiency across spend ranges.",
+      "interactions": "Channel badges and metric toggles alter chart semantics and comparison context.",
+      "api_endpoints": [
+        "/api/curves",
+        "/api/pymc-insights"
+      ],
+      "upstream_artifacts": [
+        "response_curve_points.json",
+        "pymc_uncertainty.json"
+      ],
+      "fallback_behavior": "Displays loading skeleton then hides unsupported channel overlays."
+    },
+    {
+      "hotspot_id": "HS_012",
+      "state_id": "response-curves-light-revenue",
+      "component_id": "TAB_RESPONSE_CURVES_CHANNEL_METRIC_CARDS",
+      "tab": "response-curves",
+      "state": "light-revenue",
+      "section": "channel-metric-cards",
+      "anchor_text": "Current Spend",
+      "matched_text": "HCP Detail Calls (All Channels)\nCurrent Spend\n\u00e2\u201a\u00ac5,593\nMarginal Volume\n0.03 / \u00e2\u201a\u00ac1k",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\003-response-curves-light-revenue-map.png",
+      "bbox": {
+        "x": 293.59375,
+        "y": 986.5,
+        "width": 449.59375,
+        "height": 150
+      },
+      "bbox_pct": {
+        "x": 17.475818,
+        "y": 76.118827,
+        "width": 26.761533,
+        "height": 11.574074
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/response-curves/ResponseCurvesTab.tsx",
+      "ui_role": "Response curve analytics module",
+      "business_meaning": "Shows diminishing returns and marginal efficiency across spend ranges.",
+      "interactions": "Channel badges and metric toggles alter chart semantics and comparison context.",
+      "api_endpoints": [
+        "/api/curves",
+        "/api/pymc-insights"
+      ],
+      "upstream_artifacts": [
+        "response_curve_points.json",
+        "pymc_uncertainty.json"
+      ],
+      "fallback_behavior": "Displays loading skeleton then hides unsupported channel overlays."
+    },
+    {
+      "hotspot_id": "HS_013",
+      "state_id": "response-curves-light-mroi",
+      "component_id": "TAB_RESPONSE_CURVES_MAIN_CHART_MROI",
+      "tab": "response-curves",
+      "state": "light-mroi",
+      "section": "mroi-view",
+      "anchor_text": "Response Curves",
+      "matched_text": "Response Curves",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\004-response-curves-light-mroi-map.png",
+      "bbox": {
+        "x": 301.406,
+        "y": 322.411,
+        "width": 1314.609,
+        "height": 644.821
+      },
+      "bbox_pct": {
+        "x": 17.941,
+        "y": 24.877,
+        "width": 78.251,
+        "height": 49.755
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/response-curves/ResponseCurvesTab.tsx",
+      "ui_role": "Response curve analytics module",
+      "business_meaning": "Shows diminishing returns and marginal efficiency across spend ranges.",
+      "interactions": "Channel badges and metric toggles alter chart semantics and comparison context.",
+      "api_endpoints": [
+        "/api/curves",
+        "/api/pymc-insights"
+      ],
+      "upstream_artifacts": [
+        "response_curve_points.json",
+        "pymc_uncertainty.json"
+      ],
+      "fallback_behavior": "Displays loading skeleton then hides unsupported channel overlays."
+    },
+    {
+      "hotspot_id": "HS_014",
+      "state_id": "response-curves-light-saturation",
+      "component_id": "TAB_RESPONSE_CURVES_MAIN_CHART_SATURATION",
+      "tab": "response-curves",
+      "state": "light-saturation",
+      "section": "saturation-view",
+      "anchor_text": "Response Curves",
+      "matched_text": "Response Curves",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\005-response-curves-light-saturation-map.png",
+      "bbox": {
+        "x": 301.406,
+        "y": 322.411,
+        "width": 1314.609,
+        "height": 644.821
+      },
+      "bbox_pct": {
+        "x": 17.941,
+        "y": 24.877,
+        "width": 78.251,
+        "height": 49.755
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/response-curves/ResponseCurvesTab.tsx",
+      "ui_role": "Response curve analytics module",
+      "business_meaning": "Shows diminishing returns and marginal efficiency across spend ranges.",
+      "interactions": "Channel badges and metric toggles alter chart semantics and comparison context.",
+      "api_endpoints": [
+        "/api/curves",
+        "/api/pymc-insights"
+      ],
+      "upstream_artifacts": [
+        "response_curve_points.json",
+        "pymc_uncertainty.json"
+      ],
+      "fallback_behavior": "Displays loading skeleton then hides unsupported channel overlays."
+    },
+    {
+      "hotspot_id": "HS_015",
+      "state_id": "budget-allocator-light-optimize",
+      "component_id": "TAB_BUDGET_ALLOCATOR_SCENARIO_BUILDER_OPTIMIZE",
+      "tab": "budget-allocator",
+      "state": "light-optimize",
+      "section": "scenario-builder-optimize",
+      "anchor_text": "Scenario Builder",
+      "matched_text": "Scenario Builder\n\nDefine constraints \u00e2\u2020\u2019 Optimize allocation\n\nOptimize\nWhat-If\nOptimize\nExport\nTarget\nVolume\nSafe\nBalanced\nAggressive\nTotal Budget Range\n\u00e2\u201a\u00ac3.56M \u00e2\u20ac\u201c ",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\006-budget-allocator-light-optimize-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 75,
+        "width": 1358.796875,
+        "height": 506
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 3.814852,
+        "width": 80.880766,
+        "height": 25.737538
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/budget-allocator/BudgetAllocatorTab.tsx",
+      "ui_role": "Budget allocator module",
+      "business_meaning": "Converts spend constraints into optimized allocation scenarios.",
+      "interactions": "Supports optimize and what-if modes, with export and downstream simulator handoff.",
+      "api_endpoints": [
+        "/api/budget",
+        "/api/allocator",
+        "/api/experiment"
+      ],
+      "upstream_artifacts": [
+        "raw_data.csv",
+        "response_curve_points.json",
+        "model_stats.json"
+      ],
+      "fallback_behavior": "Falls back to current allocations when optimizer inputs are incomplete."
+    },
+    {
+      "hotspot_id": "HS_016",
+      "state_id": "budget-allocator-light-optimize",
+      "component_id": "TAB_BUDGET_ALLOCATOR_OPTIMIZATION_METRICS",
+      "tab": "budget-allocator",
+      "state": "light-optimize",
+      "section": "optimization-metrics-table",
+      "anchor_text": "Optimization Metrics",
+      "matched_text": "Optimization Metrics\n\nBase vs Optimized (Impact Analysis)\n\nMetrics\tBase Case\tOptimized\t% Change\t\u00ce\u201d\nCost (\u00e2\u201a\u00ac)\t\u00e2\u201a\u00ac4.45M\t\u00e2\u201a\u00ac4.45M\t0.00%\t\u00e2\u2013\u00b2\nIncremental Response\t\u00e2\u201a\u00ac2.43M\t\u00e2\u201a\u00ac5.",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\006-budget-allocator-light-optimize-map.png",
+      "bbox": {
+        "x": 293.59375,
+        "y": 586,
+        "width": 674.390625,
+        "height": 452
+      },
+      "bbox_pct": {
+        "x": 17.475818,
+        "y": 29.806714,
+        "width": 40.142299,
+        "height": 22.990844
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/budget-allocator/BudgetAllocatorTab.tsx",
+      "ui_role": "Budget allocator module",
+      "business_meaning": "Converts spend constraints into optimized allocation scenarios.",
+      "interactions": "Supports optimize and what-if modes, with export and downstream simulator handoff.",
+      "api_endpoints": [
+        "/api/budget",
+        "/api/allocator",
+        "/api/experiment"
+      ],
+      "upstream_artifacts": [
+        "raw_data.csv",
+        "response_curve_points.json",
+        "model_stats.json"
+      ],
+      "fallback_behavior": "Falls back to current allocations when optimizer inputs are incomplete."
+    },
+    {
+      "hotspot_id": "HS_017",
+      "state_id": "budget-allocator-light-optimize",
+      "component_id": "TAB_BUDGET_ALLOCATOR_SCENARIO_RESULTS",
+      "tab": "budget-allocator",
+      "state": "light-optimize",
+      "section": "scenario-results-table",
+      "anchor_text": "Scenario Results",
+      "matched_text": "Scenario Results\n\nChannel allocation breakdown\n\nChannel\tCurrent\tOptimized\t\u00ce\u201d\n\nCommercial Rep Visits\n\t\u00e2\u201a\u00ac1.01M\t\u00e2\u201a\u00ac3.38M\t\u00e2\u201a\u00ac2.37M\n\nRep-Triggered Follow-up Emails\n\t\u00e2\u201a\u00ac330\t\u00e2\u201a\u00ac",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\006-budget-allocator-light-optimize-map.png",
+      "bbox": {
+        "x": 967.984375,
+        "y": 586,
+        "width": 674.40625,
+        "height": 452
+      },
+      "bbox_pct": {
+        "x": 57.618118,
+        "y": 29.806714,
+        "width": 40.143229,
+        "height": 22.990844
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/budget-allocator/BudgetAllocatorTab.tsx",
+      "ui_role": "Budget allocator module",
+      "business_meaning": "Converts spend constraints into optimized allocation scenarios.",
+      "interactions": "Supports optimize and what-if modes, with export and downstream simulator handoff.",
+      "api_endpoints": [
+        "/api/budget",
+        "/api/allocator",
+        "/api/experiment"
+      ],
+      "upstream_artifacts": [
+        "raw_data.csv",
+        "response_curve_points.json",
+        "model_stats.json"
+      ],
+      "fallback_behavior": "Falls back to current allocations when optimizer inputs are incomplete."
+    },
+    {
+      "hotspot_id": "HS_018",
+      "state_id": "budget-allocator-light-optimize",
+      "component_id": "TAB_BUDGET_ALLOCATOR_BUDGET_SPLIT",
+      "tab": "budget-allocator",
+      "state": "light-optimize",
+      "section": "budget-split-chart",
+      "anchor_text": "Budget Split",
+      "matched_text": "Budget Split \u00e2\u20ac\u201c Current vs Optimized\n\nCurrent = solid; Optimized = lighter tint\n\nCurrentOptimized\nCommercial Rep Visits\nCommercial Event Spend\nMedical Event Spen",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\006-budget-allocator-light-optimize-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 1044,
+        "width": 1358.796875,
+        "height": 478
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 53.102747,
+        "width": 80.880766,
+        "height": 24.313327
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/budget-allocator/BudgetAllocatorTab.tsx",
+      "ui_role": "Budget allocator module",
+      "business_meaning": "Converts spend constraints into optimized allocation scenarios.",
+      "interactions": "Supports optimize and what-if modes, with export and downstream simulator handoff.",
+      "api_endpoints": [
+        "/api/budget",
+        "/api/allocator",
+        "/api/experiment"
+      ],
+      "upstream_artifacts": [
+        "raw_data.csv",
+        "response_curve_points.json",
+        "model_stats.json"
+      ],
+      "fallback_behavior": "Falls back to current allocations when optimizer inputs are incomplete."
+    },
+    {
+      "hotspot_id": "HS_019",
+      "state_id": "budget-allocator-light-optimize",
+      "component_id": "TAB_BUDGET_ALLOCATOR_PLANNED_SCENARIO",
+      "tab": "budget-allocator",
+      "state": "light-optimize",
+      "section": "planned-scenario-panel",
+      "anchor_text": "Planned Scenario",
+      "matched_text": "Planned Scenario\n\nName the plan and save to send it to the Simulator tab\n\nScenario title\nMultipliers preview: Commercial Rep Visits: x1.25 \u00e2\u20ac\u00a2 Rep-Triggered Follo",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\006-budget-allocator-light-optimize-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 1529,
+        "width": 1358.796875,
+        "height": 278
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 77.772126,
+        "width": 80.880766,
+        "height": 14.140387
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/budget-allocator/BudgetAllocatorTab.tsx",
+      "ui_role": "Budget allocator module",
+      "business_meaning": "Converts spend constraints into optimized allocation scenarios.",
+      "interactions": "Supports optimize and what-if modes, with export and downstream simulator handoff.",
+      "api_endpoints": [
+        "/api/budget",
+        "/api/allocator",
+        "/api/experiment"
+      ],
+      "upstream_artifacts": [
+        "raw_data.csv",
+        "response_curve_points.json",
+        "model_stats.json"
+      ],
+      "fallback_behavior": "Falls back to current allocations when optimizer inputs are incomplete."
+    },
+    {
+      "hotspot_id": "HS_020",
+      "state_id": "budget-allocator-light-what-if",
+      "component_id": "TAB_BUDGET_ALLOCATOR_SCENARIO_BUILDER_WHAT_IF",
+      "tab": "budget-allocator",
+      "state": "light-what-if",
+      "section": "scenario-builder-what-if",
+      "anchor_text": "Scenario Builder",
+      "matched_text": "Scenario Builder",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\007-budget-allocator-light-what-if-map.png",
+      "bbox": {
+        "x": 318.59375,
+        "y": 102,
+        "width": 296,
+        "height": 44
+      },
+      "bbox_pct": {
+        "x": 18.963914,
+        "y": 4.845606,
+        "width": 17.619048,
+        "height": 2.090261
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/budget-allocator/BudgetAllocatorTab.tsx",
+      "ui_role": "Budget allocator module",
+      "business_meaning": "Converts spend constraints into optimized allocation scenarios.",
+      "interactions": "Supports optimize and what-if modes, with export and downstream simulator handoff.",
+      "api_endpoints": [
+        "/api/budget",
+        "/api/allocator",
+        "/api/experiment"
+      ],
+      "upstream_artifacts": [
+        "raw_data.csv",
+        "response_curve_points.json",
+        "model_stats.json"
+      ],
+      "fallback_behavior": "Falls back to current allocations when optimizer inputs are incomplete."
+    },
+    {
+      "hotspot_id": "HS_021",
+      "state_id": "experiment-light",
+      "component_id": "TAB_SIMULATOR_HEADER_SAVED_SCENARIOS",
+      "tab": "experiment",
+      "state": "light",
+      "section": "header-and-saved-scenarios",
+      "anchor_text": "Saved Scenarios",
+      "matched_text": "Global\nfrance_mavenclad_snowflake\n2023\nTarget: Profit\nScenario title\nSaved Scenarios\nSave Current\nNo saved scenarios",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\008-experiment-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 77,
+        "width": 1358.796875,
+        "height": 202
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 2.508961,
+        "width": 80.880766,
+        "height": 6.581949
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/experiment/ExperimentOptimizerTab.tsx",
+      "ui_role": "Simulator module",
+      "business_meaning": "Evaluates baseline/imported/manual multiplier scenarios against response curves.",
+      "interactions": "Scenarios can be saved, loaded, deleted, and reset.",
+      "api_endpoints": [
+        "/api/experiment",
+        "/api/scenarios"
+      ],
+      "upstream_artifacts": [
+        "response_curve_points.json",
+        "model_stats.json",
+        "scenario_store.json"
+      ],
+      "fallback_behavior": "Shows loading state until experiment payload resolves."
+    },
+    {
+      "hotspot_id": "HS_022",
+      "state_id": "experiment-light",
+      "component_id": "TAB_SIMULATOR_CHANNEL_MULTIPLIERS",
+      "tab": "experiment",
+      "state": "light",
+      "section": "channel-multipliers-panel",
+      "anchor_text": "Channel Multipliers",
+      "matched_text": "Channel Multipliers",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\008-experiment-light-map.png",
+      "bbox": {
+        "x": 301.406,
+        "y": 293.493,
+        "width": 427.533,
+        "height": 2091.038
+      },
+      "bbox_pct": {
+        "x": 17.941,
+        "y": 9.563,
+        "width": 25.448,
+        "height": 68.133
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/experiment/ExperimentOptimizerTab.tsx",
+      "ui_role": "Simulator module",
+      "business_meaning": "Evaluates baseline/imported/manual multiplier scenarios against response curves.",
+      "interactions": "Scenarios can be saved, loaded, deleted, and reset.",
+      "api_endpoints": [
+        "/api/experiment",
+        "/api/scenarios"
+      ],
+      "upstream_artifacts": [
+        "response_curve_points.json",
+        "model_stats.json",
+        "scenario_store.json"
+      ],
+      "fallback_behavior": "Shows loading state until experiment payload resolves."
+    },
+    {
+      "hotspot_id": "HS_023",
+      "state_id": "experiment-light",
+      "component_id": "TAB_SIMULATOR_OPTIMIZATION_METRICS",
+      "tab": "experiment",
+      "state": "light",
+      "section": "optimization-metrics-table",
+      "anchor_text": "Optimization Metrics",
+      "matched_text": "Optimization Metrics\n\nBase vs Your Adjustments (Impact Analysis)\n\nMetrics\tBase Case\tYour Scenario\tChange\t% Change\t\u00ce\u201d\nCost (\u00e2\u201a\u00ac)\t\u00e2\u201a\u00ac4.45M\t\u00e2\u201a\u00ac4.45M\t0\t0.00%\t\u00e2\u2013\u00b2\nIncremental",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\008-experiment-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 2405,
+        "width": 1358.796875,
+        "height": 371
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 78.364288,
+        "width": 80.880766,
+        "height": 12.088628
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/experiment/ExperimentOptimizerTab.tsx",
+      "ui_role": "Simulator module",
+      "business_meaning": "Evaluates baseline/imported/manual multiplier scenarios against response curves.",
+      "interactions": "Scenarios can be saved, loaded, deleted, and reset.",
+      "api_endpoints": [
+        "/api/experiment",
+        "/api/scenarios"
+      ],
+      "upstream_artifacts": [
+        "response_curve_points.json",
+        "model_stats.json",
+        "scenario_store.json"
+      ],
+      "fallback_behavior": "Shows loading state until experiment payload resolves."
+    },
+    {
+      "hotspot_id": "HS_024",
+      "state_id": "insights-light",
+      "component_id": "TAB_INSIGHTS_HEADLINE_TRUST",
+      "tab": "insights",
+      "state": "light",
+      "section": "headline-and-trust-block",
+      "anchor_text": "Channel Performance",
+      "matched_text": "Channel Performance\n\nAll metrics from PyMC Bayesian model\n\nChannel\tROI\t90% CI\tSaturation\tSpend\tConfidence\nCommercial Rep VisitsTop\t0.05x\t[0.00, 0.15]\t\n32%\n\t$62,",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\009-insights-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 285.5,
+        "width": 1358.796875,
+        "height": 564
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 11.605691,
+        "width": 80.880766,
+        "height": 22.926829
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/insights/InsightsTab.tsx",
+      "ui_role": "Insights module",
+      "business_meaning": "Provides confidence-aware recommendations, saturation signals, and diagnostic health checks.",
+      "interactions": "Tooltips and chart interactions clarify probabilistic model interpretation.",
+      "api_endpoints": [
+        "/api/pymc-insights",
+        "/api/model-stats",
+        "/api/contributions"
+      ],
+      "upstream_artifacts": [
+        "pymc_uncertainty.json",
+        "model_stats.json",
+        "pareto_alldecomp_matrix.csv"
+      ],
+      "fallback_behavior": "Falls back to base MMM cards and locked placeholders when PyMC outputs are absent."
+    },
+    {
+      "hotspot_id": "HS_025",
+      "state_id": "insights-light",
+      "component_id": "TAB_INSIGHTS_RADAR_CHART",
+      "tab": "insights",
+      "state": "light",
+      "section": "radar-chart",
+      "anchor_text": "Channel Efficiency Radar",
+      "matched_text": "Channel Efficiency Radar\n\nROI \u00c2\u00b7 Confidence \u00c2\u00b7 Headroom \u00c2\u00b7 Adstock\n\nCommercial Rep VisitsMarketing Campaign EmailsMedical Science Liaison VisitsRep-Triggered Follo",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\009-insights-light-map.png",
+      "bbox": {
+        "x": 293.59375,
+        "y": 1303.5,
+        "width": 670.390625,
+        "height": 410
+      },
+      "bbox_pct": {
+        "x": 17.475818,
+        "y": 52.987805,
+        "width": 39.904204,
+        "height": 16.666667
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/insights/InsightsTab.tsx",
+      "ui_role": "Insights module",
+      "business_meaning": "Provides confidence-aware recommendations, saturation signals, and diagnostic health checks.",
+      "interactions": "Tooltips and chart interactions clarify probabilistic model interpretation.",
+      "api_endpoints": [
+        "/api/pymc-insights",
+        "/api/model-stats",
+        "/api/contributions"
+      ],
+      "upstream_artifacts": [
+        "pymc_uncertainty.json",
+        "model_stats.json",
+        "pareto_alldecomp_matrix.csv"
+      ],
+      "fallback_behavior": "Falls back to base MMM cards and locked placeholders when PyMC outputs are absent."
+    },
+    {
+      "hotspot_id": "HS_026",
+      "state_id": "insights-light",
+      "component_id": "TAB_INSIGHTS_EFFICIENCY_FRONTIER",
+      "tab": "insights",
+      "state": "light",
+      "section": "efficiency-frontier",
+      "anchor_text": "Efficiency Frontier",
+      "matched_text": "Efficiency Frontier\n\nSpend vs ROI\n\n$0k\n$35k\n$70k\n$105k\n$140k\nSpend\n0\n0.45\n0.9\n1.35\n1.8\nROI",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\009-insights-light-map.png",
+      "bbox": {
+        "x": 971.984375,
+        "y": 1303.5,
+        "width": 670.40625,
+        "height": 410
+      },
+      "bbox_pct": {
+        "x": 57.856213,
+        "y": 52.987805,
+        "width": 39.905134,
+        "height": 16.666667
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/insights/InsightsTab.tsx",
+      "ui_role": "Insights module",
+      "business_meaning": "Provides confidence-aware recommendations, saturation signals, and diagnostic health checks.",
+      "interactions": "Tooltips and chart interactions clarify probabilistic model interpretation.",
+      "api_endpoints": [
+        "/api/pymc-insights",
+        "/api/model-stats",
+        "/api/contributions"
+      ],
+      "upstream_artifacts": [
+        "pymc_uncertainty.json",
+        "model_stats.json",
+        "pareto_alldecomp_matrix.csv"
+      ],
+      "fallback_behavior": "Falls back to base MMM cards and locked placeholders when PyMC outputs are absent."
+    },
+    {
+      "hotspot_id": "HS_027",
+      "state_id": "insights-light",
+      "component_id": "TAB_INSIGHTS_ADSTOCK_BLOCK",
+      "tab": "insights",
+      "state": "light",
+      "section": "adstock-block",
+      "anchor_text": "Adstock",
+      "matched_text": "Adstock / Carryover Effects\n\nHow long each channel's impact persists after spend stops\n\nCommercial Rep Visits\nDecay: 24%\nHalf-life: 0.5 periods\nWeak\nMedical Sci",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\009-insights-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 1721.5,
+        "width": 1358.796875,
+        "height": 344
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 69.979675,
+        "width": 80.880766,
+        "height": 13.98374
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/insights/InsightsTab.tsx",
+      "ui_role": "Insights module",
+      "business_meaning": "Provides confidence-aware recommendations, saturation signals, and diagnostic health checks.",
+      "interactions": "Tooltips and chart interactions clarify probabilistic model interpretation.",
+      "api_endpoints": [
+        "/api/pymc-insights",
+        "/api/model-stats",
+        "/api/contributions"
+      ],
+      "upstream_artifacts": [
+        "pymc_uncertainty.json",
+        "model_stats.json",
+        "pareto_alldecomp_matrix.csv"
+      ],
+      "fallback_behavior": "Falls back to base MMM cards and locked placeholders when PyMC outputs are absent."
+    },
+    {
+      "hotspot_id": "HS_028",
+      "state_id": "insights-light",
+      "component_id": "TAB_INSIGHTS_RECOMMENDATIONS_ACTION",
+      "tab": "insights",
+      "state": "light",
+      "section": "recommendations-and-suggested-action",
+      "anchor_text": "Suggested Action",
+      "matched_text": "Suggested Action\n\nModel-driven scenario\n\nIncrease Marketing Campaign Emails by 20%\n\nInvestment\n\n$35\n\nExpected Return\n\n$61\n\nP(positive)\n75%",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\009-insights-light-map.png",
+      "bbox": {
+        "x": 293.59375,
+        "y": 2073.5,
+        "width": 670.390625,
+        "height": 266
+      },
+      "bbox_pct": {
+        "x": 17.475818,
+        "y": 84.288618,
+        "width": 39.904204,
+        "height": 10.813008
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/insights/InsightsTab.tsx",
+      "ui_role": "Insights module",
+      "business_meaning": "Provides confidence-aware recommendations, saturation signals, and diagnostic health checks.",
+      "interactions": "Tooltips and chart interactions clarify probabilistic model interpretation.",
+      "api_endpoints": [
+        "/api/pymc-insights",
+        "/api/model-stats",
+        "/api/contributions"
+      ],
+      "upstream_artifacts": [
+        "pymc_uncertainty.json",
+        "model_stats.json",
+        "pareto_alldecomp_matrix.csv"
+      ],
+      "fallback_behavior": "Falls back to base MMM cards and locked placeholders when PyMC outputs are absent."
+    },
+    {
+      "hotspot_id": "HS_029",
+      "state_id": "insights-light",
+      "component_id": "TAB_INSIGHTS_DIAGNOSTICS",
+      "tab": "insights",
+      "state": "light",
+      "section": "diagnostics-block",
+      "anchor_text": "Model Diagnostics",
+      "matched_text": "Model Diagnostics\nTrust: 100/100\nR-hat:\n1.000\nDivergences:\n0\nESS:\n5,149\nconverged",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\009-insights-light-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 2347.5,
+        "width": 1358.796875,
+        "height": 72
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 95.426829,
+        "width": 80.880766,
+        "height": 2.926829
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/insights/InsightsTab.tsx",
+      "ui_role": "Insights module",
+      "business_meaning": "Provides confidence-aware recommendations, saturation signals, and diagnostic health checks.",
+      "interactions": "Tooltips and chart interactions clarify probabilistic model interpretation.",
+      "api_endpoints": [
+        "/api/pymc-insights",
+        "/api/model-stats",
+        "/api/contributions"
+      ],
+      "upstream_artifacts": [
+        "pymc_uncertainty.json",
+        "model_stats.json",
+        "pareto_alldecomp_matrix.csv"
+      ],
+      "fallback_behavior": "Falls back to base MMM cards and locked placeholders when PyMC outputs are absent."
+    },
+    {
+      "hotspot_id": "HS_030",
+      "state_id": "settings-light",
+      "component_id": "TAB_SETTINGS_CONFIGURATION_SELECTION",
+      "tab": "settings",
+      "state": "light",
+      "section": "configuration-selection-panel",
+      "anchor_text": "Configuration Selection",
+      "matched_text": "Configuration Selection\nHierarchical selection.\nTARGET MARKET\nFrance\nPRODUCT LINE\nMavenclad\nMODEL VERSION\nLatest (Auto-Selected) (PYMC) (Active)\nMODEL TIER\nBasi",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\010-settings-light-map.png",
+      "bbox": {
+        "x": 383.984375,
+        "y": 159,
+        "width": 378.65625,
+        "height": 735
+      },
+      "bbox_pct": {
+        "x": 22.856213,
+        "y": 14.722222,
+        "width": 22.539063,
+        "height": 68.055556
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/system-flow/SystemFlowTab.tsx",
+      "ui_role": "Settings module",
+      "business_meaning": "Configures market/product/version/tier and exposes one-pager model diagnostics.",
+      "interactions": "Selectors and tier buttons change active context and geography availability.",
+      "api_endpoints": [
+        "/api/flow",
+        "/api/model-stats"
+      ],
+      "upstream_artifacts": [
+        "model_selection.json",
+        "model_stats.json",
+        "pareto_aggregated.csv"
+      ],
+      "fallback_behavior": "Degrades to placeholder model stats when selected artifacts are missing."
+    },
+    {
+      "hotspot_id": "HS_031",
+      "state_id": "settings-light",
+      "component_id": "TAB_SETTINGS_ONE_PAGER_METRIC_CARDS",
+      "tab": "settings",
+      "state": "light",
+      "section": "one-pager-metric-cards",
+      "anchor_text": "Model Accuracy",
+      "matched_text": "Model Accuracy (R\u00c2\u00b2)\n\n91.6%\n\nVariance explained by model\n\nGood",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\010-settings-light-map.png",
+      "bbox": {
+        "x": 786.663,
+        "y": 172.69,
+        "width": 757.333,
+        "height": 145.413
+      },
+      "bbox_pct": {
+        "x": 46.825,
+        "y": 15.99,
+        "width": 45.079,
+        "height": 13.464
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/system-flow/SystemFlowTab.tsx",
+      "ui_role": "Settings module",
+      "business_meaning": "Configures market/product/version/tier and exposes one-pager model diagnostics.",
+      "interactions": "Selectors and tier buttons change active context and geography availability.",
+      "api_endpoints": [
+        "/api/flow",
+        "/api/model-stats"
+      ],
+      "upstream_artifacts": [
+        "model_selection.json",
+        "model_stats.json",
+        "pareto_aggregated.csv"
+      ],
+      "fallback_behavior": "Degrades to placeholder model stats when selected artifacts are missing."
+    },
+    {
+      "hotspot_id": "HS_032",
+      "state_id": "settings-light",
+      "component_id": "TAB_SETTINGS_EFFICIENCY_CHART",
+      "tab": "settings",
+      "state": "light",
+      "section": "efficiency-chart",
+      "anchor_text": "Share of Spend vs. Share of Effect",
+      "matched_text": "Share of Spend vs. Share of Effect\nIf Effect > Spend, channel is efficient (Green). If Spend > Effect, channel is inefficient (Red).(ADVANCED \u00e2\u20ac\u201d aggregated chann",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\010-settings-light-map.png",
+      "bbox": {
+        "x": 778.640625,
+        "y": 333,
+        "width": 382.671875,
+        "height": 507
+      },
+      "bbox_pct": {
+        "x": 46.347656,
+        "y": 30.833333,
+        "width": 22.778088,
+        "height": 46.944444
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/system-flow/SystemFlowTab.tsx",
+      "ui_role": "Settings module",
+      "business_meaning": "Configures market/product/version/tier and exposes one-pager model diagnostics.",
+      "interactions": "Selectors and tier buttons change active context and geography availability.",
+      "api_endpoints": [
+        "/api/flow",
+        "/api/model-stats"
+      ],
+      "upstream_artifacts": [
+        "model_selection.json",
+        "model_stats.json",
+        "pareto_aggregated.csv"
+      ],
+      "fallback_behavior": "Degrades to placeholder model stats when selected artifacts are missing."
+    },
+    {
+      "hotspot_id": "HS_033",
+      "state_id": "settings-light",
+      "component_id": "TAB_SETTINGS_DRIVER_CONTRIBUTION",
+      "tab": "settings",
+      "state": "light",
+      "section": "driver-contribution-chart",
+      "anchor_text": "Driver Contribution",
+      "matched_text": "Driver Contribution\nPercentage contribution to total target metric.\n0%\n20%\n40%\n60%\n80%\nHCP Detail Calls (All Channels)\nTotal Event Spend\nTotal Emails Sent\nEmail",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\010-settings-light-map.png",
+      "bbox": {
+        "x": 1169.3125,
+        "y": 333,
+        "width": 382.671875,
+        "height": 507
+      },
+      "bbox_pct": {
+        "x": 69.601935,
+        "y": 30.833333,
+        "width": 22.778088,
+        "height": 46.944444
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/system-flow/SystemFlowTab.tsx",
+      "ui_role": "Settings module",
+      "business_meaning": "Configures market/product/version/tier and exposes one-pager model diagnostics.",
+      "interactions": "Selectors and tier buttons change active context and geography availability.",
+      "api_endpoints": [
+        "/api/flow",
+        "/api/model-stats"
+      ],
+      "upstream_artifacts": [
+        "model_selection.json",
+        "model_stats.json",
+        "pareto_aggregated.csv"
+      ],
+      "fallback_behavior": "Degrades to placeholder model stats when selected artifacts are missing."
+    },
+    {
+      "hotspot_id": "HS_034",
+      "state_id": "geography-light-advanced",
+      "component_id": "TAB_GEOGRAPHY_ADVANCED_MAP",
+      "tab": "geography",
+      "state": "light-advanced",
+      "section": "advanced-map-view",
+      "anchor_text": "Territory Map",
+      "matched_text": "Territory Map\n\nEffect intensity by region\n\nAll channels\nEmail Opens\nHCP Detail Calls (All Channels)\nTotal Emails Sent\nTotal Event Spend\nARA\nBFC\nBRE\nCVL\nGES\nHDF\n",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\011-geography-light-advanced-map.png",
+      "bbox": {
+        "x": 383.984375,
+        "y": 277,
+        "width": 482,
+        "height": 652
+      },
+      "bbox_pct": {
+        "x": 22.856,
+        "y": 9.658,
+        "width": 28.69,
+        "height": 22.73
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/geography/GeographyTab.tsx",
+      "ui_role": "Geography module",
+      "business_meaning": "Surfaces territory-level effect heterogeneity and comparison signals.",
+      "interactions": "Map, table, and channel filters are linked for exploratory diagnosis.",
+      "api_endpoints": [
+        "/api/territory-effects",
+        "/api/territory-contributions",
+        "/api/products-summary"
+      ],
+      "upstream_artifacts": [
+        "territory_effects.json",
+        "territory_contributions.json",
+        "model_stats.json"
+      ],
+      "fallback_behavior": "If no territory payload exists, advanced map/table content remains empty."
+    },
+    {
+      "hotspot_id": "HS_035",
+      "state_id": "geography-light-advanced",
+      "component_id": "TAB_GEOGRAPHY_TERRITORY_TABLE",
+      "tab": "geography",
+      "state": "light-advanced",
+      "section": "territory-detail-table",
+      "anchor_text": "Territory Detail",
+      "matched_text": "Territory Detail",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\011-geography-light-advanced-map.png",
+      "bbox": {
+        "x": 382.712,
+        "y": 945.313,
+        "width": 1151.998,
+        "height": 597.757
+      },
+      "bbox_pct": {
+        "x": 22.78,
+        "y": 32.961,
+        "width": 68.571,
+        "height": 20.843
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/geography/GeographyTab.tsx",
+      "ui_role": "Geography module",
+      "business_meaning": "Surfaces territory-level effect heterogeneity and comparison signals.",
+      "interactions": "Map, table, and channel filters are linked for exploratory diagnosis.",
+      "api_endpoints": [
+        "/api/territory-effects",
+        "/api/territory-contributions",
+        "/api/products-summary"
+      ],
+      "upstream_artifacts": [
+        "territory_effects.json",
+        "territory_contributions.json",
+        "model_stats.json"
+      ],
+      "fallback_behavior": "If no territory payload exists, advanced map/table content remains empty."
+    },
+    {
+      "hotspot_id": "HS_036",
+      "state_id": "geography-light-advanced",
+      "component_id": "TAB_GEOGRAPHY_CHANNEL_DISPERSION",
+      "tab": "geography",
+      "state": "light-advanced",
+      "section": "channel-dispersion-cards",
+      "anchor_text": "Channel Dispersion",
+      "matched_text": "Channel Dispersion Across Territories\n\nHow uniformly each channel performs across territories\n\nEmail Opens\nVariable\nAvg\n0.611\nMin\n0.114\nMax\n5.291\nSpread\n98%\nHCP",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\011-geography-light-advanced-map.png",
+      "bbox": {
+        "x": 379.984375,
+        "y": 1574,
+        "width": 1176,
+        "height": 352
+      },
+      "bbox_pct": {
+        "x": 22.618118,
+        "y": 54.88145,
+        "width": 70,
+        "height": 12.273361
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/geography/GeographyTab.tsx",
+      "ui_role": "Geography module",
+      "business_meaning": "Surfaces territory-level effect heterogeneity and comparison signals.",
+      "interactions": "Map, table, and channel filters are linked for exploratory diagnosis.",
+      "api_endpoints": [
+        "/api/territory-effects",
+        "/api/territory-contributions",
+        "/api/products-summary"
+      ],
+      "upstream_artifacts": [
+        "territory_effects.json",
+        "territory_contributions.json",
+        "model_stats.json"
+      ],
+      "fallback_behavior": "If no territory payload exists, advanced map/table content remains empty."
+    },
+    {
+      "hotspot_id": "HS_037",
+      "state_id": "geography-light-basic",
+      "component_id": "TAB_GEOGRAPHY_BASIC_LOCKED",
+      "tab": "geography",
+      "state": "light-basic",
+      "section": "basic-tier-locked-placeholder",
+      "anchor_text": "Advanced Tier Required",
+      "matched_text": "Advanced Tier Required\n\nTerritory-level analysis requires the Advanced hierarchical model. Switch to Advanced tier in Settings to unlock geographic insights.\n\nA",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\012-geography-light-basic-map.png",
+      "bbox": {
+        "x": 575.984375,
+        "y": 165,
+        "width": 784,
+        "height": 390
+      },
+      "bbox_pct": {
+        "x": 34.284784,
+        "y": 15.277778,
+        "width": 46.666667,
+        "height": 36.111111
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/features/geography/GeographyTab.tsx",
+      "ui_role": "Geography module",
+      "business_meaning": "Surfaces territory-level effect heterogeneity and comparison signals.",
+      "interactions": "Map, table, and channel filters are linked for exploratory diagnosis.",
+      "api_endpoints": [
+        "/api/territory-effects",
+        "/api/territory-contributions",
+        "/api/products-summary"
+      ],
+      "upstream_artifacts": [
+        "territory_effects.json",
+        "territory_contributions.json",
+        "model_stats.json"
+      ],
+      "fallback_behavior": "If no territory payload exists, advanced map/table content remains empty."
+    },
+    {
+      "hotspot_id": "HS_038",
+      "state_id": "home-dark",
+      "component_id": "TAB_HOME_DARK_OVERVIEW",
+      "tab": "home",
+      "state": "dark",
+      "section": "tab-overview",
+      "anchor_text": "Dashboard Overview",
+      "matched_text": "Dashboard Overview",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\013-home-dark-map.png",
+      "bbox": {
+        "x": 293.59375,
+        "y": 77,
+        "width": 276.5625,
+        "height": 48
+      },
+      "bbox_pct": {
+        "x": 17.475818,
+        "y": 3.834661,
+        "width": 16.462054,
+        "height": 2.390438
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/pages/index.tsx",
+      "ui_role": "Dark-mode parity overview",
+      "business_meaning": "Validates readability and layout parity in dark theme.",
+      "interactions": "None",
+      "api_endpoints": [],
+      "upstream_artifacts": [],
+      "fallback_behavior": "Inherits each tab's light-mode fallback behavior."
+    },
+    {
+      "hotspot_id": "HS_039",
+      "state_id": "sales-impact-dark",
+      "component_id": "TAB_SALES_IMPACT_DARK_OVERVIEW",
+      "tab": "sales-impact",
+      "state": "dark",
+      "section": "tab-overview",
+      "anchor_text": "Annual Volume Impact",
+      "matched_text": "Annual Volume Impact\n\nStacked monthly incremental volume by channel (percentage view)\n\nCommercial Event SpendCommercial Rep VisitsDrug Sample DropsEmail OpensMa",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\014-sales-impact-dark-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 216,
+        "width": 1358.796875,
+        "height": 572
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 13.863928,
+        "width": 80.880766,
+        "height": 36.713736
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/pages/index.tsx",
+      "ui_role": "Dark-mode parity overview",
+      "business_meaning": "Validates readability and layout parity in dark theme.",
+      "interactions": "None",
+      "api_endpoints": [],
+      "upstream_artifacts": [],
+      "fallback_behavior": "Inherits each tab's light-mode fallback behavior."
+    },
+    {
+      "hotspot_id": "HS_040",
+      "state_id": "response-curves-dark",
+      "component_id": "TAB_RESPONSE_CURVES_DARK_OVERVIEW",
+      "tab": "response-curves",
+      "state": "dark",
+      "section": "tab-overview",
+      "anchor_text": "Response Curves",
+      "matched_text": "Response Curves",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\015-response-curves-dark-map.png",
+      "bbox": {
+        "x": 4,
+        "y": 203,
+        "width": 247,
+        "height": 56
+      },
+      "bbox_pct": {
+        "x": 0.238095,
+        "y": 15.217391,
+        "width": 14.702381,
+        "height": 4.197901
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/pages/index.tsx",
+      "ui_role": "Dark-mode parity overview",
+      "business_meaning": "Validates readability and layout parity in dark theme.",
+      "interactions": "None",
+      "api_endpoints": [],
+      "upstream_artifacts": [],
+      "fallback_behavior": "Inherits each tab's light-mode fallback behavior."
+    },
+    {
+      "hotspot_id": "HS_041",
+      "state_id": "budget-allocator-dark",
+      "component_id": "TAB_BUDGET_ALLOCATOR_DARK_OVERVIEW",
+      "tab": "budget-allocator",
+      "state": "dark",
+      "section": "tab-overview",
+      "anchor_text": "Scenario Builder",
+      "matched_text": "Scenario Builder\n\nDefine constraints \u00e2\u2020\u2019 Optimize allocation\n\nOptimize\nWhat-If\nOptimize\nExport\nTarget\nVolume\nSafe\nBalanced\nAggressive\nTotal Budget Range\n\u00e2\u201a\u00ac3.56M \u00e2\u20ac\u201c ",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\016-budget-allocator-dark-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 75,
+        "width": 1358.796875,
+        "height": 506
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 3.814852,
+        "width": 80.880766,
+        "height": 25.737538
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/pages/index.tsx",
+      "ui_role": "Dark-mode parity overview",
+      "business_meaning": "Validates readability and layout parity in dark theme.",
+      "interactions": "None",
+      "api_endpoints": [],
+      "upstream_artifacts": [],
+      "fallback_behavior": "Inherits each tab's light-mode fallback behavior."
+    },
+    {
+      "hotspot_id": "HS_042",
+      "state_id": "experiment-dark",
+      "component_id": "TAB_SIMULATOR_DARK_OVERVIEW",
+      "tab": "experiment",
+      "state": "dark",
+      "section": "tab-overview",
+      "anchor_text": "Channel Multipliers",
+      "matched_text": "Channel Multipliers",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\017-experiment-dark-map.png",
+      "bbox": {
+        "x": 318.59375,
+        "y": 312,
+        "width": 220.640625,
+        "height": 44
+      },
+      "bbox_pct": {
+        "x": 18.963914,
+        "y": 10.166178,
+        "width": 13.133371,
+        "height": 1.433692
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/pages/index.tsx",
+      "ui_role": "Dark-mode parity overview",
+      "business_meaning": "Validates readability and layout parity in dark theme.",
+      "interactions": "None",
+      "api_endpoints": [],
+      "upstream_artifacts": [],
+      "fallback_behavior": "Inherits each tab's light-mode fallback behavior."
+    },
+    {
+      "hotspot_id": "HS_043",
+      "state_id": "insights-dark",
+      "component_id": "TAB_INSIGHTS_DARK_OVERVIEW",
+      "tab": "insights",
+      "state": "dark",
+      "section": "tab-overview",
+      "anchor_text": "Channel Performance",
+      "matched_text": "Channel Performance\n\nAll metrics from PyMC Bayesian model\n\nChannel\tROI\t90% CI\tSaturation\tSpend\tConfidence\nCommercial Rep VisitsTop\t0.05x\t[0.00, 0.15]\t\n32%\n\t$62,",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\018-insights-dark-map.png",
+      "bbox": {
+        "x": 288.59375,
+        "y": 285.5,
+        "width": 1358.796875,
+        "height": 564
+      },
+      "bbox_pct": {
+        "x": 17.178199,
+        "y": 11.605691,
+        "width": 80.880766,
+        "height": 22.926829
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/pages/index.tsx",
+      "ui_role": "Dark-mode parity overview",
+      "business_meaning": "Validates readability and layout parity in dark theme.",
+      "interactions": "None",
+      "api_endpoints": [],
+      "upstream_artifacts": [],
+      "fallback_behavior": "Inherits each tab's light-mode fallback behavior."
+    },
+    {
+      "hotspot_id": "HS_044",
+      "state_id": "settings-dark",
+      "component_id": "TAB_SETTINGS_DARK_OVERVIEW",
+      "tab": "settings",
+      "state": "dark",
+      "section": "tab-overview",
+      "anchor_text": "System Settings",
+      "matched_text": "System Settings",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\019-settings-dark-map.png",
+      "bbox": {
+        "x": 383.984375,
+        "y": 77,
+        "width": 516.78125,
+        "height": 48
+      },
+      "bbox_pct": {
+        "x": 22.856213,
+        "y": 7.12963,
+        "width": 30.760789,
+        "height": 4.444444
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/pages/index.tsx",
+      "ui_role": "Dark-mode parity overview",
+      "business_meaning": "Validates readability and layout parity in dark theme.",
+      "interactions": "None",
+      "api_endpoints": [],
+      "upstream_artifacts": [],
+      "fallback_behavior": "Inherits each tab's light-mode fallback behavior."
+    },
+    {
+      "hotspot_id": "HS_045",
+      "state_id": "geography-dark",
+      "component_id": "TAB_GEOGRAPHY_DARK_OVERVIEW",
+      "tab": "geography",
+      "state": "dark",
+      "section": "tab-overview",
+      "anchor_text": "Territory",
+      "matched_text": "Territory",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\020-geography-dark-map.png",
+      "bbox": {
+        "x": 408.984375,
+        "y": 1033,
+        "width": 257.421875,
+        "height": 56.5
+      },
+      "bbox_pct": {
+        "x": 24.344308,
+        "y": 36.018131,
+        "width": 15.322731,
+        "height": 1.970014
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/pages/index.tsx",
+      "ui_role": "Dark-mode parity overview",
+      "business_meaning": "Validates readability and layout parity in dark theme.",
+      "interactions": "None",
+      "api_endpoints": [],
+      "upstream_artifacts": [],
+      "fallback_behavior": "Inherits each tab's light-mode fallback behavior."
+    },
+    {
+      "hotspot_id": "HS_046",
+      "state_id": "home-light",
+      "component_id": "TAB_HOME_CONTEXT_SELECTORS",
+      "tab": "home",
+      "state": "light",
+      "section": "context-selectors",
+      "anchor_text": "France",
+      "matched_text": "France\nMavenclad\n2023\nToggle theme",
+      "screenshot": "C:\\Users\\M316235\\repo\\temp\\interactive-docs-toolkit\\runs\\20260313_135456\\clean\\001-home-light-map.png",
+      "bbox": {
+        "x": 1042,
+        "y": 8,
+        "width": 540,
+        "height": 52
+      },
+      "bbox_pct": {
+        "x": 62.024,
+        "y": 0.409,
+        "width": 32.143,
+        "height": 2.661
+      },
+      "source_file": "/Users/amank/Code/marketing-mix/apps/dashboard/components/layout/DashboardLayout.tsx",
+      "ui_role": "Dashboard context selectors and theme toggle",
+      "business_meaning": "Controls the scope of all dashboard analyses by selecting country, product, year, and visual theme.",
+      "interactions": "Dropdown selectors filter all downstream data; theme toggle switches between light and dark mode.",
+      "api_endpoints": [
+        "/api/contributions",
+        "/api/products-summary"
+      ],
+      "upstream_artifacts": [
+        "raw_data.csv",
+        "model_stats.json"
+      ],
+      "fallback_behavior": "Defaults to first available country/product/year combination."
+    }
+  ],
+  "omitted_components": []
+}
